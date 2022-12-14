@@ -4,14 +4,14 @@ $leftMenuConfig =
 [
 	[
 		'label' => $lang->crime,
-		'ready' => false,
-		'cooldown' => 150,
+		'ready' => true,
+		'cooldown' => 0,
 		'link' => 'crime'
 	],
 	[
 		'label' => $lang->blackmail,
-		'ready' => false,
-		'cooldown' => 13,
+		'ready' => true,
+		'cooldown' => 0,
 		'link' => 'blackmail'
 	],
 	[
@@ -22,26 +22,20 @@ $leftMenuConfig =
 	],
 	[
 		'label' => $lang->mission,
-		'ready' => true,
+		'ready' => false,
 		'cooldown' => 0,
 		'link' => 'mission'
 	],
 	[
 		'label' => $lang->lottery,
-		'ready' => true,
-		'cooldown' => 0,
 		'link' => 'lottery'
 	],
 	[
 		'label' => $lang->jail,
-		'ready' => true,
-		'cooldown' => 0,
 		'link' => 'jail'
 	],
 	[
 		'label' => $lang->attack_player,
-		'ready' => true,
-		'cooldown' => 0,
 		'link' => 'attack_player'
 	],
 	[

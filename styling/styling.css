@@ -257,3 +257,7 @@ ul li {
 a {
 	text-decoration: none;
 }
+
+.isReady {
+	background-color: #5b6b2b !important;
+}
