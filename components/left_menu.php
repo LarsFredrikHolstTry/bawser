@@ -12,7 +12,7 @@ include 'left_menu_config.php';
 		$isLink = isset($action['link']) && $action['link'];
 
 		?>
-		<a class="left_menu_element <?= !$isLink ? 'no_link' : null ?>" href="<?= $isLink ? '?page='.$action['link'].'' : '#' ?>">
+		<a class="shadow left_menu_element <?= !$isLink ? 'no_link' : null ?>" href="<?= $isLink ? '?page='.$action['link'].'' : '#' ?>">
 			<span><?= $hasLabel ? $action['label'] : '' ?></span>
 		</a>
 	<?php } ?>

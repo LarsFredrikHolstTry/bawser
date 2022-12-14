@@ -5,9 +5,13 @@ include 'right_menu_config.php';
 ?>
 
 <div class="left_menu">
-	<?php foreach($rightMenuConfig as $action){ ?>
-		<div class="shadow <?= isset($action['divider']) && $action['divider'] ? 'mb-1' : 'right_menu_element' ?>">
-			<span><?= isset($action['label']) ? $action['label'] : '' ?></span>
-		</div>
+	<?php foreach($rightMenuConfig as $action){
+		
+		$hasLabel = isset($action['label']) && $action['label'];
+		
+		?>
+		<a class="shadow right_menu_element <?= !$isLink ? 'no_link' : null ?>" href="<?= $isLink ? '?page='.$action['link'].'' : '#' ?>">
+			<span><?= $hasLabel ? $action['label'] : '' ?></span>
+		</a>
 	<?php } ?>
 </div>

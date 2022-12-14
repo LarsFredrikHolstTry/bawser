@@ -71,13 +71,12 @@ body {
 }
 
 .left_menu_element,
-a .right_menu_element {
+.right_menu_element {
 	transition: 0.2s;
 }
 
 .left_menu_element:hover,
-a .right_menu_element:hover,
-a .active {
+.right_menu_element:hover {
 	background-color: #575757;
 	color: white;
 }
