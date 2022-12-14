@@ -1,0 +1,22 @@
+{
+	"crime": "Kriminalitet",
+	"blackmail": "Utpressing",
+	"gta": "Biltyveri",
+	"mission": "Oppdrag",
+	"lottery": "Lotto",
+	"jail": "Fengsel",
+	"attack_player": "Angrep spiller",
+	"bank": "Banken",
+	"homepage": "Hjemmeside",
+	"poker": "Poker",
+	"auctions": "Auksjoner",
+	"city": "Bydeler",
+	"family": "Familie",
+	"achievements": "Prestasjoner",
+	"hitlist": "Hitliste",
+	"offtopicforum": "Off topic forum",
+	"salesforum": "Salg og søknad",
+	"gameforum": "Game forum",
+	"logged_in_as": "Logget inn som",
+	"money_balance": "{amount} kr"
+}

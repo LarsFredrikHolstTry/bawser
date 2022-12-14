@@ -1,0 +1,22 @@
+{
+	"crime": "Crime",
+	"blackmail": "Blackmail",
+	"gta": "GTA",
+	"mission": "Mission",
+	"lottery": "Lottery",
+	"jail": "Jail",
+	"attack_player": "Attack player",
+	"bank": "The bank",
+	"homepage": "Homepage",
+	"poker": "Poker",
+	"auctions": "Auctions",
+	"city": "City",
+	"family": "Family",
+	"achievements": "Achievements",
+	"hitlist": "Hitlist",
+	"offtopicforum": "Off topic forum",
+	"salesforum": "Sale and application",
+	"gameforum": "Game forum",
+	"logged_in_as": "Logged in as",
+	"money_balance": "${amount}"
+}
