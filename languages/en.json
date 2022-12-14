@@ -18,5 +18,11 @@
 	"salesforum": "Sale and application",
 	"gameforum": "Game forum",
 	"logged_in_as": "Logged in as",
-	"money_balance": "${amount}"
+	"money_balance": "${amount}",
+	"rank_points": "Rank points",
+	"health": "Health",
+	"home": "Home",
+	"messages": "Messages",
+	"notifications": "Notifications",
+	"map": "Map"
 }

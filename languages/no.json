@@ -18,5 +18,11 @@
 	"salesforum": "Salg og søknad",
 	"gameforum": "Game forum",
 	"logged_in_as": "Logget inn som",
-	"money_balance": "{amount} kr"
+	"money_balance": "{amount} kr",
+	"rank_points": "Rankpoeng",
+	"health": "Helse",
+	"home": "Hjem",
+	"messages": "Meldinger",
+	"notifications": "Varslinger",
+	"map": "Kart"
 }

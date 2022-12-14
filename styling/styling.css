@@ -1,9 +1,3 @@
-* {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -32,7 +26,6 @@ body {
 
 .header {
 	background-color: #393939;
-	height: 140px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	margin-bottom: 5px;
@@ -62,10 +55,10 @@ body {
 
 .left_menu_element,
 .right_menu_element {
-	width: 100%;
 	border-radius: 5px;
 	padding: 12px 15px;
 	color: #b3b3b3;
+	width: auto;
 }
 
 .left_menu a {
@@ -73,12 +66,12 @@ body {
 	background: none;
 }
 
-a .left_menu_element,
+.left_menu_element,
 a .right_menu_element {
 	transition: 0.2s;
 }
 
-a .left_menu_element:hover,
+.left_menu_element:hover,
 a .right_menu_element:hover,
 a .active {
 	background-color: #575757;
@@ -87,6 +80,8 @@ a .active {
 
 .no_link {
 	cursor: default;
+	opacity: 0%;
+	padding: 2px;
 }
 
 .main_content {
@@ -103,6 +98,10 @@ a .active {
 
 .aic {
 	align-items: center;
+}
+
+.jcc {
+	justify-content: center;
 }
 
 .mb-1 {
@@ -142,16 +141,39 @@ a .active {
 }
 
 .fg-3 {
-	gap: 2px;
+	gap: 3px;
 }
 
-a {
-	text-decoration: none;
-	color: #f9f9f9;
+.fg-5 {
+	gap: 5px;
 }
 
-a:hover {
-	text-decoration: underline;
+.fg-10 {
+	gap: 10px;
+}
+
+.fg-20 {
+	gap: 20px;
+}
+
+.fg-30 {
+	gap: 30px;
+}
+
+.fg-40 {
+	gap: 40px;
+}
+
+.fg-50 {
+	gap: 50px;
+}
+
+.big_icon {
+	font-size: 20px;
+}
+
+.jcsb {
+	justify-content: space-between;
 }
 
 .profile_content {
@@ -165,6 +187,8 @@ a:hover {
 }
 
 .middle_content {
+	display: flex;
+	margin-left: 20px;
 	flex-grow: 1;
 }
 
@@ -180,4 +204,53 @@ ul {
 
 ul li {
 	padding: 2px;
+}
+
+.text-secondary {
+	opacity: 70%;
+}
+
+.progress-bar-rank,
+.progress-bar-health {
+	width: 100%;
+	height: 2px;
+	background-color: #454545;
+	border-radius: 2px;
+}
+
+.progress-bar-rank-fill,
+.progress-bar-health-fill {
+	display: block;
+	height: 2px;
+	border-radius: 2px;
+}
+
+.progress-bar-rank-fill {
+	background-color: #ff7902;
+}
+
+.progress-bar-health-fill {
+	background-color: #bbf706;
+}
+
+.secondary-link {
+	color: #a3a3a3;
+	transition: 0.2s;
+}
+
+.secondary-link:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.primary-link {
+	color: #f9f9f9;
+}
+
+.primary-link:hover {
+	text-decoration: underline;
+}
+
+a {
+	text-decoration: none;
 }

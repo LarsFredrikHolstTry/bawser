@@ -12,10 +12,8 @@ include 'left_menu_config.php';
 		$isLink = isset($action['link']) && $action['link'];
 
 		?>
-		<a class="<?= !$isLink ? 'no_link' : null ?>" href="<?= $isLink ? '?page='.$action['link'].'' : '#' ?>">
-			<div class="<?= $isDivider ? 'mb-2' : 'left_menu_element shadow' ?>">
-				<span><?= $hasLabel ? $action['label'] : '' ?></span>
-			</div>
+		<a class="left_menu_element <?= !$isLink ? 'no_link' : null ?>" href="<?= $isLink ? '?page='.$action['link'].'' : '#' ?>">
+			<span><?= $hasLabel ? $action['label'] : '' ?></span>
 		</a>
 	<?php } ?>
 </div>
