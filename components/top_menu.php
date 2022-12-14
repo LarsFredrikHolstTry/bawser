@@ -1,8 +1,14 @@
+<?php
+
+$sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
+
+?>
+
 <div class="header shadow">
 	<div class="profile_content">
 		<div class="df aic">
 			<div class="profile_picture">
-				<img class="shadow" style="max-height: 110px;" src="https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png" />
+				<img class="shadow" style="max-height: 110px;" src=<?= $sample_image ?> />
 			</div>
 			<div class="user_info">
 				<ul>
@@ -69,7 +75,3 @@
 
 	</div>
 </div>
-
-<style>
-
-</style>
