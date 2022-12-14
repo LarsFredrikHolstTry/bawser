@@ -68,7 +68,6 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 		</div>
 		<div class="df fdc fg-5" style="margin-right: 30px;">
 			<img src="images/small_logo.png" />
-			<span style="color: #7a7a7a">BAWSER</span>
 		</div>
 	</div>
 	<div class="right_content">
