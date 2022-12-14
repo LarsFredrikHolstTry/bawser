@@ -55,7 +55,7 @@ body {
 
 .left_menu_element,
 .right_menu_element {
-	border-radius: 5px;
+	border-radius: 3px;
 	padding: 12px 15px;
 	color: #b3b3b3;
 	width: auto;
@@ -88,7 +88,7 @@ a .active {
 	flex-grow: 1;
 	height: 100px;
 	background-color: #404040;
-	border-radius: 5px;
+	border-radius: 3px;
 }
 
 .app {
