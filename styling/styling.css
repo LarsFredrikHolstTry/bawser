@@ -1,11 +1,16 @@
 body {
+	background: url('../images/background.png');
+	background-size: cover;
+	background-color: #2b2b2b;
 	margin: 0;
 	padding: 0;
-	background-color: #2b2b2b;
 	font-family: sans-serif;
 	font-size: 11px;
 }
 
+* {
+	box-sizing: border-box;
+}
 .shadow {
 	-moz-box-shadow: 0px 1px 5px 0px #292929;
 	-webkit-box-shadow: 0px 1px 5px 0px #292929;
@@ -60,9 +65,10 @@ body {
 .left_menu_element,
 .right_menu_element {
 	border-radius: 3px;
-	padding: 12px 15px;
+	padding: 0px 15px;
 	color: #b3b3b3;
 	width: auto;
+	height: 32px;
 }
 
 .left_menu a {
@@ -260,4 +266,14 @@ a {
 
 .isReady {
 	background-color: #5b6b2b !important;
+}
+
+.menu_cooldown {
+	background-color: rgb(43, 43, 43);
+	padding: 3px 5px;
+	border-radius: 2px;
+}
+
+.menu_divider {
+	height: 3px;
 }

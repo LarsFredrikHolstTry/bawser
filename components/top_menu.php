@@ -48,19 +48,19 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 				</div>
 			</div>
 			<div style="height: 50px;" class="df fg-50">
-				<a href="#" class="secondary-link df fdc aic fg-5">
+				<a href="?page=home" class="secondary-link df fdc aic fg-5">
 					<i class="big_icon fi fi-sr-home"></i>
 					<span><?= $lang->home ?></span>
 				</a>
-				<a href="#" class="secondary-link df fdc aic fg-5">
+				<a href="?page=messages" class="secondary-link df fdc aic fg-5">
 					<i class="big_icon fi fi-sr-envelope"></i>
 					<span><?= $lang->messages ?></span>
 				</a>
-				<a href="#" class="secondary-link df fdc aic fg-5">
+				<a href="?page=notifications" class="secondary-link df fdc aic fg-5">
 					<i class="big_icon fi fi-sr-bell"></i>
 					<span><?= $lang->notifications ?></span>
 				</a>
-				<a href="#" class="secondary-link df fdc aic fg-5">
+				<a href="?page=map" class="secondary-link df fdc aic fg-5">
 					<i class="big_icon fi fi-sr-map"></i>
 					<span><?= $lang->map ?></span>
 				</a>

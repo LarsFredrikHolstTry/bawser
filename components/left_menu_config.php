@@ -23,7 +23,7 @@ $leftMenuConfig =
 	[
 		'label' => $lang->mission,
 		'ready' => false,
-		'cooldown' => 0,
+		'cooldown' => 2,
 		'link' => 'mission'
 	],
 	[
