@@ -24,5 +24,18 @@
 	"home": "Home",
 	"messages": "Messages",
 	"notifications": "Notifications",
-	"map": "Map"
+	"map": "Map",
+	"yourBankAcc": "Your bank account (Eff. interest {interest}%)",
+	"accountBalance": "Your account balance",
+	"changeBank": "Change bank",
+	"withdraw": "Widthdraw",
+	"deposit": "Deposit",
+	"withdrawAmount": "Widthdraw amount",
+	"depositAmount": "Deposit amount",
+	"transferMoney": "Transfer money",
+	"transfer": "Transfer",
+	"username": "Username",
+	"amount": "Amount",
+	"money": "Money",
+	"points": "Points"
 }

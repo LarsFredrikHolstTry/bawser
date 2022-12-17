@@ -15,6 +15,8 @@ $lang = json_decode(file_get_contents('languages/en.json'));
 		<link rel="stylesheet" href="styling/styling.css" />
 		<title>Bawser</title>
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -23,7 +25,17 @@ $lang = json_decode(file_get_contents('languages/en.json'));
 				<div class="app">
 					<?php include 'components/left_menu.php' ?>
 					<div class="main_content">
-						
+						<?php
+
+							if (isset($_GET['page'])) {
+								$filename = "app/" . $_GET['page'] . "/" . $_GET['page'] . ".php";
+								if (file_exists($filename)) {
+										include "app/" . $_GET['page'] . "/" . $_GET['page'] . ".php";
+								} else {
+									include "app/404/404.php";
+								}
+							}
+						?>
 					</div>
 					<?php include 'components/right_menu.php' ?>
 				</div>

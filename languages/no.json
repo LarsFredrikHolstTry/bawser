@@ -24,5 +24,7 @@
 	"home": "Hjem",
 	"messages": "Meldinger",
 	"notifications": "Varslinger",
-	"map": "Kart"
+	"map": "Kart",
+	"yourBankAcc": "Din bankkonto (Eff. rente {interest}%)",
+	"accountBalance": "Din konto balanse"
 }

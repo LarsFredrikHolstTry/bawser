@@ -71,6 +71,23 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 		</div>
 	</div>
 	<div class="right_content">
-
+		<div style="height: 50px; padding: 0px 40px;" class="df jcsb">
+			<a href="?page=playersOnline" class="mt-5 medium_icon secondary-link df fdc aic fg-5">
+				<i class="fi fi-sr-users"></i>
+			</a>
+			<a href="?page=settings" class="mt-5 medium_icon secondary-link df fdc aic fg-5">
+				<i class="fi fi-sr-settings"></i>
+			</a>
+			<a href="?page=logOut" class="mt-5 medium_icon secondary-link df fdc aic fg-5">
+				<i class="fi fi-sr-exit"></i>
+			</a>
+		</div>
+		<div class="df jcc aic fg-5">
+			<i class="big_icon mt-1 fi fi-rr-clock-five"></i>
+			<div class="df fdc">
+				<span class="clock_text">21:08</span>
+				<span>02.01.02020</span>
+			</div>
+		</div>
 	</div>
 </div>

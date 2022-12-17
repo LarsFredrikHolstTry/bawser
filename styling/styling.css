@@ -92,9 +92,10 @@ body {
 
 .main_content {
 	flex-grow: 1;
-	height: 100px;
 	background-color: #404040;
 	border-radius: 3px;
+	flex-direction: column;
+	display: flex;
 }
 
 .app {
@@ -126,8 +127,16 @@ body {
 	margin-top: 0.1rem;
 }
 
+.mt-5 {
+	margin-top: 0.5rem;
+}
+
 .df {
 	display: flex;
+}
+
+.df-same-width {
+	flex: 1;
 }
 
 .fdr {
@@ -176,6 +185,10 @@ body {
 
 .big_icon {
 	font-size: 20px;
+}
+
+.medium_icon {
+	font-size: 17px;
 }
 
 .jcsb {
@@ -266,11 +279,127 @@ a {
 }
 
 .menu_cooldown {
-	background-color: rgb(43, 43, 43);
+	background-color: #494949;
+	color: #b3b3b3;
 	padding: 3px 5px;
 	border-radius: 2px;
 }
 
 .menu_divider {
 	height: 3px;
+}
+
+.clock_text {
+	font-size: 24px;
+}
+
+.main_content_header {
+	display: flex;
+	width: 100%;
+	background-color: #444444;
+	color: #9c9c9c;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	padding: 10px;
+	box-sizing: border-box;
+	gap: 5px;
+	font-size: 12px;
+}
+
+.main_content_context {
+	padding: 10px;
+}
+
+.content_header {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	color: #9c9c9c;
+	background-color: #575757;
+	border-radius: 3px;
+	margin-bottom: 2px;
+}
+
+.content_context {
+	background-color: #474747;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px;
+	border-radius: 3px;
+	border: 1px solid #575757;
+	color: #9c9c9c;
+}
+
+input[type='text'] {
+	padding: 7px 10px;
+	background-color: #474747;
+	border: 1px solid #575757;
+	border-radius: 3px;
+	transition: 0.2s;
+	color: white;
+	font-size: 12px;
+}
+
+select {
+	padding: 6px 10px;
+	background-color: #474747;
+	border: 1px solid #575757;
+	border-radius: 3px;
+	transition: 0.2s;
+	color: #9c9c9c;
+	font-size: 12px;
+}
+
+select:hover {
+	cursor: pointer;
+	border: 1px solid #888888;
+	color: white;
+}
+
+select:active,
+select:focus {
+	border: 1px solid #888888;
+	outline: none;
+	color: white;
+}
+
+input[type='text']:active,
+input[type='text']:focus {
+	border: 1px solid #888888;
+	outline: none;
+	color: white;
+}
+
+.btn {
+	padding: 7px 10px;
+	border: 1px solid #575757;
+	color: #9c9c9c;
+	border-radius: 3px;
+	transition: 0.2s;
+	font-size: 12px;
+}
+
+.success_btn {
+	background-color: #445b40;
+}
+
+.error_btn {
+	background-color: #4e3737;
+}
+
+.btn:hover {
+	cursor: pointer;
+	color: white;
+}
+
+.small_input {
+	width: 70px;
+}
+
+.medium_input {
+	width: 110px;
+}
+
+.color-white {
+	color: rgb(226, 226, 226);
 }
