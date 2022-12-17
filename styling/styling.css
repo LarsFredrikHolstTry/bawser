@@ -96,11 +96,16 @@ body {
 	border-radius: 3px;
 	flex-direction: column;
 	display: flex;
+	max-width: 660px;
 }
 
 .app {
 	display: flex;
 	gap: 5px;
+}
+
+.fww {
+	flex-wrap: wrap;
 }
 
 .aic {
@@ -308,6 +313,7 @@ a {
 
 .main_content_context {
 	padding: 10px;
+	color: #9c9c9c;
 }
 
 .content_header {
@@ -383,6 +389,14 @@ input[type='text']:focus {
 	background-color: #445b40;
 }
 
+.default_btn {
+	background-color: #474747;
+}
+
+.btn_active {
+	background-color: #585858;
+}
+
 .error_btn {
 	background-color: #4e3737;
 }
@@ -402,4 +416,15 @@ input[type='text']:focus {
 
 .color-white {
 	color: rgb(226, 226, 226);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
 }
