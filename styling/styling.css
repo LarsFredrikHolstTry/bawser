@@ -136,6 +136,10 @@ body {
 	margin-top: 0.5rem;
 }
 
+.mt-10 {
+	margin-top: 1rem;
+}
+
 .df {
 	display: flex;
 }
@@ -427,4 +431,50 @@ h6 {
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
+}
+
+.logout:hover {
+	color: #ff7902 !important;
+}
+
+.tabs_container {
+	background-color: #444444;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	height: 250px;
+	border-radius: 3px;
+	color: #9c9c9c;
+}
+
+.tac {
+	text-align: center;
+}
+
+.tablinks {
+	height: 14px;
+	width: 8px;
+	border: none;
+	background-color: #444444;
+	border-radius: 69px;
+	border: 1px solid #828282;
+}
+
+.tablinks:hover {
+	cursor: pointer;
+	background-color: #828282;
+}
+
+.tabcontent {
+	height: 170px;
+	display: none;
+}
+
+.active {
+	background-color: #828282;
+}
+
+.tab {
+	display: flex;
+	gap: 10px;
 }

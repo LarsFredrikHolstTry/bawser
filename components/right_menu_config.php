@@ -17,4 +17,31 @@ $rightMenuConfig =
 		'amount' => 5,
 		'link' => '?page=forum&cat=2'
 	],
+	[
+		'divider' => true,
+	],
+	[
+		'tabs' => true,
+	],
+	[
+		'divider' => true,
+	],
+	[
+		'label' => 'Hjelp / Support',
+		'amount' => 0,
+		'link' => '?page=support'
+	],
+	[
+		'label' => 'Søknader',
+		'amount' => 0,
+		'link' => '?page=applications'
+	],
+	[
+		'label' => 'Rankliste',
+		'link' => '?page=ranks'
+	],
+	[
+		'label' => 'Statistikk',
+		'link' => '?page=statistic'
+	],
 ];
