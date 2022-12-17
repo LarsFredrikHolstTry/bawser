@@ -7,7 +7,7 @@
 		140 000 000 kr
 	</span>
 </div>
-<div class="tac fg-5 mt-10 df fdc aic">
+<div class="tac fg-10 mt-10 df fdc aic">
 	<a class="primary-link" href="#">Gudfar</a>
 	<span>Familie: <a class="primary-link" href="#">La Cosa Nostra</a></span>
 	<span>Lager <a class="primary-link" href="#">500 kuler</a></span>
