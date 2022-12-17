@@ -44,4 +44,8 @@ $rightMenuConfig =
 		'label' => 'Statistikk',
 		'link' => '?page=statistic'
 	],
+	[
+		'label' => 'Poeng',
+		'link' => '?page=points'
+	],
 ];
