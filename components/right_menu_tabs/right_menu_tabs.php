@@ -8,28 +8,40 @@
 
 	<div class="df aic jcc mt-10">
 		<div class="tab">
-			<button class="tablinks" onclick="openTab(event, 'user_info')" id="defaultOpen"></button>
-			<button class="tablinks" onclick="openTab(event, 'last_events')"></button>
+			<button class="tablinks" onclick="openTab(event, 'user_info')" id="user_info_default"></button>
+			<button class="tablinks" onclick="openTab(event, 'last_events')" id="last_events_default"></button>
 		</div>
 	</div>
 </div>
 
 <script>
 
-	function openTab(evt, cityName) {
+	function openTab(evt, tabName) {
 		var i, tabcontent, tablinks;
 		tabcontent = document.getElementsByClassName("tabcontent");
 		for (i = 0; i < tabcontent.length; i++) {
 			tabcontent[i].style.display = "none";
 		}
+
 		tablinks = document.getElementsByClassName("tablinks");
 		for (i = 0; i < tablinks.length; i++) {
 			tablinks[i].className = tablinks[i].className.replace(" active", "");
 		}
-		document.getElementById(cityName).style.display = "block";
+
+		document.getElementById(tabName).style.display = "block";
 		evt.currentTarget.className += " active";
+
+		localStorage.setItem('activeTab', tabName);
 	}
 
-	document.getElementById("defaultOpen").click();
+	var activeTab = localStorage.getItem('activeTab');
+
+	if(activeTab){
+		document.getElementById(activeTab + '_default').click();
+	} else {
+		document.getElementById('user_info_default').click();
+	}
+
+
 
 </script>
