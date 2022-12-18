@@ -96,8 +96,9 @@ body {
 .mobile-nav-right-btn {
 	background-color: #323232;
 	color: #9b9b9b;
-	padding: 5px 5px 3px 5px;
+	padding: 5px 5px 1px 5px;
 	border-radius: 3px;
+	font-size: 19px;
 }
 
 .content {
