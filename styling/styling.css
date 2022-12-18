@@ -319,6 +319,14 @@ ul li {
 	color: #1d6f7e;
 }
 
+.text-light-blue {
+	color: #4fcbf9;
+}
+
+.text-light-green {
+	color: #b1e909;
+}
+
 .progress-bar-rank,
 .progress-bar-health {
 	width: 100%;

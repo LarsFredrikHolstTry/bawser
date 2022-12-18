@@ -5,11 +5,15 @@
 	<div id="last_events" class="tabcontent">
 		<?php include 'components/right_menu_tabs/last_events.php'; ?>
 	</div>
+	<div id="last_forum" class="tabcontent">
+		<?php include 'components/right_menu_tabs/last_forum.php'; ?>
+	</div>
 
 	<div class="df aic jcc mt-10">
 		<div class="tab">
 			<button class="tablinks" onclick="openTab(event, 'user_info')" id="user_info_default"></button>
 			<button class="tablinks" onclick="openTab(event, 'last_events')" id="last_events_default"></button>
+			<button class="tablinks" onclick="openTab(event, 'last_forum')" id="last_forum_default"></button>
 		</div>
 	</div>
 </div>
