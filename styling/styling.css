@@ -47,7 +47,8 @@ body {
 
 	.mobile_header,
 	.mobile_info_header,
-	.mobile_footer {
+	.mobile_footer,
+	.mobile_navigation_header {
 		display: block !important;
 	}
 
@@ -83,6 +84,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 15px;
+	display: none;
 }
 
 .mobile-nav-item {
