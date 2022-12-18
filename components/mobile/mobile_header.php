@@ -56,4 +56,24 @@
 			</div>
 		</div>
 	</div>
+	<div class="mobile_navigation_header">
+		<div class="mobile-nav-left-btn shadow">
+			<i class="fi fi-rr-menu-burger"></i>
+		</div>
+		<div class="mobile-nav-item df fg-5 shadow">
+			<i class="text-yellow fi fi-sr-dollar"></i>
+			133,2 m kr
+		</div>
+		<div class="mobile-nav-item df fg-5 shadow">
+			<i class="text-orange fi fi-sr-flame"></i>
+			14,2k kuler
+		</div>
+		<div class="mobile-nav-item df fg-5 shadow">
+			<i class="text-light-blue fi fi-rr-diamond"></i>
+			260 poeng
+		</div>
+		<div class="mobile-nav-right-btn shadow">
+			<i class="fi fi-rr-menu-burger"></i>
+		</div>
+	</div>
 </div>

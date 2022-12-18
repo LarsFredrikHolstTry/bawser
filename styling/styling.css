@@ -78,6 +78,28 @@ body {
 	padding: 10px 15px;
 }
 
+.mobile_navigation_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 15px;
+}
+
+.mobile-nav-item {
+	padding: 5px 7px;
+	background-color: #313131;
+	border-radius: 3px;
+	color: #9b9b9b;
+}
+
+.mobile-nav-left-btn,
+.mobile-nav-right-btn {
+	background-color: #323232;
+	color: #9b9b9b;
+	padding: 5px 5px 3px 5px;
+	border-radius: 3px;
+}
+
 .content {
 	width: 1050px;
 	height: 100px;
@@ -317,6 +339,10 @@ ul li {
 
 .text-blue {
 	color: #1d6f7e;
+}
+
+.text-yellow {
+	color: #ffba00;
 }
 
 .text-light-blue {
