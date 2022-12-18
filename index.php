@@ -15,13 +15,16 @@ $lang = json_decode(file_get_contents('languages/en.json'));
 		<link rel="stylesheet" href="styling/styling.css" />
 		<title>Bawser</title>
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content">
+				<?php include 'components/mobile/mobile_header.php'; ?>
 				<?php include 'components/top_menu.php' ?>
+				<?php include 'components/mobile/mobile_footer.php' ?>
 				<div class="app">
 					<?php include 'components/left_menu.php' ?>
 					<div class="main_content">

@@ -4,7 +4,7 @@ include 'right_menu_config.php';
 
 ?>
 
-<div class="left_menu">
+<div class="right_menu">
 	<?php foreach($rightMenuConfig as $action){
 		
 		$hasLabel = isset($action['label']) && $action['label'];

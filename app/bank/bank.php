@@ -13,7 +13,7 @@
 			<a class="primary-link" href="#"><?= $lang->changeBank ?></a>
 		</div>
 		<div class="content_context">
-			<div class="df jcsb aic">
+			<div class="df jcsb aic fdc-on-mobile fg-5">
 				<div class="fg-3 df fdc">
 					<span><?= $lang->accountBalance ?></span>
 					<span class="medium_icon color-white"><?= str_replace("{amount}", '1 000 000', $lang->money_balance); ?></span>
@@ -34,7 +34,7 @@
 			<span><?= $lang->transferMoney ?></span>
 		</div>
 		<div class="content_context">
-			<div class="df jcsb aic">
+			<div class="df jcsb aic fdc-on-mobile fg-5">
 				<div class="fg-5 df aic">
 					<input type="text" class="medium_input" placeholder="<?= $lang->username ?>" />
 					<input type="text" class="medium_input" id="amount" placeholder="<?= $lang->amount ?>" />
