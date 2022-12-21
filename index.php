@@ -3,6 +3,7 @@
 ob_start();
 
 $lang = json_decode(file_get_contents('languages/en.json'));
+include 'functions/alerts.php';
 
 ?>
 

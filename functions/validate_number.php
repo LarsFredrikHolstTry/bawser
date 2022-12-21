@@ -1,6 +1,6 @@
 <?php
 
-function validate_number(string $amount, bool $allowMinus) {
+function validate_number(string $amount, ?bool $allowMinus = false) {
 	// Remove spacing from a number
 	// 1 000 will be formatted to 1000
 	$amount = number_format($amount, 0, '.', ' ');
@@ -17,3 +17,5 @@ function validate_number(string $amount, bool $allowMinus) {
 
 	return true;
 }
+
+echo validate_number(100);

@@ -640,3 +640,91 @@ h6 {
 .footer_ready {
 	border-bottom: 5px solid #669003;
 }
+
+.feedback {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 2px;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.feedback-success {
+	color: #cae5cb;
+	background-color: #0c130d;
+}
+
+.feedback-success-icon {
+	color: #5daa60;
+}
+
+.feedback-error {
+	color: #f4c7c7;
+	background-color: #160b0b;
+}
+
+.feedback-error-icon {
+	color: #c4372c;
+}
+
+.feedback-default {
+	color: #afdcef;
+	background-color: #071318;
+}
+
+.feedback-default-icon {
+	color: #2293c6;
+}
+
+.feedback-warning {
+	color: #ffe2b7;
+	background-color: #191207;
+}
+
+.feedback-warning-icon {
+	color: #e89823;
+}
+
+.table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td,
+.table-header th {
+	border: 1px solid #3f3f3f;
+	text-align: left;
+	padding: 10px;
+}
+
+td:not(:first-child),
+.table-header th:not(:first-child) {
+	text-align: center;
+}
+
+.table-header th {
+	background-color: #282828;
+	text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+	background-color: #2f2f2f;
+}
+
+tr:nth-child(odd) {
+	background-color: #363636;
+}
+
+.table-row-clickable {
+	transition: 0.2s;
+}
+
+.table-row-clickable:hover {
+	color: black;
+	cursor: pointer;
+	background-color: #bbf706;
+}
