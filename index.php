@@ -46,6 +46,8 @@ $exp = 250;
 								} else {
 									include "app/404/404.php";
 								}
+							} else {
+								include "app/homepage/homepage.php";
 							}
 						?>
 					<?php include 'components/right_menu.php' ?>
