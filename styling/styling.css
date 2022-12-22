@@ -199,6 +199,10 @@ body {
 	align-items: center;
 }
 
+.ais {
+	align-items: flex-start;
+}
+
 .jcc {
 	justify-content: center;
 }
@@ -323,6 +327,10 @@ body {
 	flex-grow: 1;
 }
 
+.w-100 {
+	width: 100%;
+}
+
 .profile_content .df .profile_img {
 	justify-content: center;
 }
@@ -419,8 +427,8 @@ a {
 }
 
 .isReady:hover {
-	background-color: #b1e909 !important;
-	color: black;
+	background-color: #81934a !important;
+	color: white;
 }
 
 .menu_cooldown {

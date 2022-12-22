@@ -1,3 +1,5 @@
+<div class="main_content">
+
 <div class="main_content_header">
 	<div class="main_content_header_icon">
 		<i class="fi fi-sr-bank"></i>
@@ -52,7 +54,7 @@
 		</div>
 	</div>
 </div>
-
+</div>
 <script src="js/number_format.js"></script>
 <script>
 

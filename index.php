@@ -5,6 +5,14 @@ ob_start();
 $lang = json_decode(file_get_contents('languages/en.json'));
 include 'functions/alerts.php';
 
+/**
+ * Temp data for testing before connecting to database
+ */
+$username = 'Skitzo';
+$acc_id = 0;
+$money = 10000000;
+$exp = 250;
+
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +37,6 @@ include 'functions/alerts.php';
 				<?php include 'components/mobile/mobile_footer.php' ?>
 				<div class="app">
 					<?php include 'components/left_menu.php' ?>
-					<div class="main_content">
 						<?php
 
 							if (isset($_GET['page'])) {
@@ -41,7 +48,6 @@ include 'functions/alerts.php';
 								}
 							}
 						?>
-					</div>
 					<?php include 'components/right_menu.php' ?>
 				</div>
 			</div>
