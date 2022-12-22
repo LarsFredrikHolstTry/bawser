@@ -377,6 +377,14 @@ ul li {
 	color: #b1e909;
 }
 
+.auction-status-active {
+	color: #b1e909;
+}
+
+.auction-status-end {
+	color: #ff7902;
+}
+
 .progress-bar-rank,
 .progress-bar-health {
 	width: 100%;
