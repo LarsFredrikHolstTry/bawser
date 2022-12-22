@@ -55,6 +55,7 @@ $leftMenuConfig =
 	],
 	[
 		'label' => $lang->auctions,
+		'active_auctions' => 3,
 		'link' => 'auctions'
 	],
 	[
