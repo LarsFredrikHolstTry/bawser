@@ -1,7 +1,5 @@
 # Bawser
 
-More info coming soon 🎊
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
