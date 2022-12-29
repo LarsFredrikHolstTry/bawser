@@ -5,8 +5,8 @@ ob_start();
 $lang = json_decode(file_get_contents('../languages/en.json'));
 include '../functions/alerts.php';
 require_once '../env.php';
-require_once '../db/SunDB.php';
-$db = new SunDB(null, $ENV_host, $ENV_user, $ENV_password, $ENV_db);
+require_once '../db/GrumpyPDO.php';
+$db = new GrumpyPdo($ENV_host, $ENV_user, $ENV_password, $ENV_db);
 
 ?>
 

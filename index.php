@@ -5,8 +5,8 @@ ob_start();
 $lang = json_decode(file_get_contents('languages/en.json'));
 include 'functions/alerts.php';
 require_once 'env.php';
-require_once 'db/SunDB.php';
-$db = new SunDB(null, $ENV_host, $ENV_user, $ENV_password, $ENV_db);
+require_once 'db/GrumpyPDO.php';
+$db = new GrumpyPdo($ENV_host, $ENV_user, $ENV_password, $ENV_db);
 
 $_SESSION['ID'] = 1;
 
@@ -16,9 +16,7 @@ $_SESSION['ID'] = 1;
 $money = 10000000;
 $exp = 250;
 
-/* SELECT * FROM account WHERE ACC_id = Session ID */
-$account = $db->select('account')->where('ACC_id', $_SESSION['ID'], '=')->run();
-$account = reset($account);
+$account = $db->run("SELECT * FROM account WHERE ACC_id = ".$_SESSION['ID']."")->fetch();
 
 if(!isset($_SESSION['ID'])){
 	header('location: homepage/index.php');
