@@ -46,6 +46,4 @@
 		document.getElementById('user_info_default').click();
 	}
 
-
-
 </script>

@@ -2,27 +2,11 @@
 
 ob_start();
 
-$lang = json_decode(file_get_contents('languages/en.json'));
-include 'functions/alerts.php';
-require_once 'env.php';
-require_once 'db/SunDB.php';
+$lang = json_decode(file_get_contents('../languages/en.json'));
+include '../functions/alerts.php';
+require_once '../env.php';
+require_once '../db/SunDB.php';
 $db = new SunDB(null, $ENV_host, $ENV_user, $ENV_password, $ENV_db);
-
-$_SESSION['ID'] = 1;
-
-/**
- * Temp data for testing before connecting to database
- */
-$money = 10000000;
-$exp = 250;
-
-/* SELECT * FROM account WHERE ACC_id = Session ID */
-$account = $db->select('account')->where('ACC_id', $_SESSION['ID'], '=')->run();
-$account = reset($account);
-
-if(!isset($_SESSION['ID'])){
-	header('location: homepage/index.php');
-}
 
 ?>
 
@@ -32,7 +16,7 @@ if(!isset($_SESSION['ID'])){
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="styling/styling.css" />
+		<link rel="stylesheet" href="../styling/styling.css" />
 		<title>Bawser</title>
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
@@ -43,23 +27,23 @@ if(!isset($_SESSION['ID'])){
 	<body>
 		<div class="container">
 			<div class="content">
-				<?php include 'components/mobile/mobile_header.php'; ?>
+				<?php // include 'homepage/components/mobile/mobile_header.php'; ?>
 				<?php include 'components/top_menu.php' ?>
-				<?php include 'components/mobile/mobile_footer.php' ?>
 				<div class="app">
 					<?php include 'components/left_menu.php' ?>
 						<?php
 
 							if (isset($_GET['page'])) {
-								$filename = "app/" . $_GET['page'] . "/" . $_GET['page'] . ".php";
+								$filename = $_GET['page'] . ".php";
 								if (file_exists($filename)) {
-										include "app/" . $_GET['page'] . "/" . $_GET['page'] . ".php";
+										include $_GET['page'] . ".php";
 								} else {
-									include "app/404/404.php";
+									include "homepage/404/404.php";
 								}
 							} else {
-								include "app/homepage/homepage.php";
+								include "homepage.php";
 							}
+
 						?>
 					<?php include 'components/right_menu.php' ?>
 				</div>

@@ -17,9 +17,9 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 							<?= $lang->logged_in_as ?>
 						</div>
 						<div>
-							<a href="?page=profile&user=username" class="primary-link mt-1">
+							<a href="?page=profile&user=<?= $account['ACC_name'] ?? 'null' ?>" class="primary-link mt-1">
 								<i style="color: #FF7902" class="fi fi-sr-user"></i> 
-								{username}
+								<?= $account['ACC_name'] ?? 'null' ?>
 							</a>
 						</div>
 					</li>
