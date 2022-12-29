@@ -78,7 +78,7 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 			<a href="?page=settings" class="mt-5 medium_icon secondary-link df fdc aic fg-5">
 				<i class="fi fi-sr-settings"></i>
 			</a>
-			<a href="?page=logOut" class="logout mt-5 medium_icon secondary-link df fdc aic fg-5">
+			<a href="/homepage" class="logout mt-5 medium_icon secondary-link df fdc aic fg-5">
 				<i class="fi fi-sr-exit"></i>
 			</a>
 		</div>

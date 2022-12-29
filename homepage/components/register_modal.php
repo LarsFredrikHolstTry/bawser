@@ -22,6 +22,11 @@
 				<input class="w-100" type="text" placeholder="Passord">
 				<input class="w-100" type="text" placeholder="Gjenta passord">
 			</div>
+			<div style="margin-top: 20px;" class="w-100 df fg-5 fdc aic">
+				<span class="tac">Ved å registrere deg på Bawser godtar du vilkårene som kan leses
+					<a class="success-link" target="_blank" href="terms.php">vilkårene</a>
+				</span>
+			</div>
 			<div class="w-100 df jcc aic">
 				<input class="btn success_btn" type="submit" value="Registrer"/>
 			</div>
