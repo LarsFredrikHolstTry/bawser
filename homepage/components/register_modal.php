@@ -79,7 +79,6 @@
 
 	$(document).ready(function() {
         $('#register-btn').click(function() {
-            // $("#feedback-container").load("components/feedback.php");
 						var username = $("#username").val();
 						var email = $("#email").val();
 						var password = $("#password").val();
