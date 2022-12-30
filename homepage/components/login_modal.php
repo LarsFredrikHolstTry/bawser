@@ -21,7 +21,7 @@
 				<input class="w-100" type="text" placeholder="Passord">
 			</div>
 			<div class="w-100 df jcsb aic">
-				<a class="secondary-link" href="#">Glemt passord?</a>
+				<a class="secondary-link" href="?page=forgot_password">Glemt passord?</a>
 				<input class="btn success_btn" type="submit" value="Logg inn"/>
 			</div>
 			<div style="margin-top: 20px;" class="w-100 df fg-5 fdc aic">
