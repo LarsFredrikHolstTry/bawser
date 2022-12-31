@@ -23,10 +23,10 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 							</a>
 						</div>
 					</li>
-					<li>Gudfar</li>
+					<li>null</li>
 					<li><?= str_replace("{amount}", '1 000 000', $lang->money_balance); ?></li>
-					<li>London</li>
-					<li><?= $lang->family ?>: <a href="?page=family" class="primary-link">{familyname}</a></li>
+					<li>null</li>
+					<li><?= $lang->family ?>: <a href="?page=family" class="primary-link">null</a></li>
 				</ul>
 			</div>
 		</div>
@@ -78,7 +78,7 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 			<a href="?page=settings" class="mt-5 medium_icon secondary-link df fdc aic fg-5">
 				<i class="fi fi-sr-settings"></i>
 			</a>
-			<a href="/homepage" class="logout mt-5 medium_icon secondary-link df fdc aic fg-5">
+			<a href="?page=logout" class="logout mt-5 medium_icon secondary-link df fdc aic fg-5">
 				<i class="fi fi-sr-exit"></i>
 			</a>
 		</div>

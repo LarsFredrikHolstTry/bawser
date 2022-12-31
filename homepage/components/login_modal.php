@@ -13,16 +13,22 @@
 			</span>
 		</div>
 		<div style="padding: 20px 80px;" class="modal-content fdc fg-10 aic">
+		<div id="success_msg" class="w-100">
+				<?php echo alert('success', '<span id="successTxt"></span>') ?>
+			</div>
+			<div id="error_msg" class="w-100">
+				<?php echo alert('error', '<span id="errorTxt"></span>') ?>
+			</div>
 			<div>
 				<img class="myFlexedImage" src="../images/small_logo.png">
 			</div>
 			<div class="w-100 mt-5 df fg-5 fdc aic">
-				<input class="w-100" type="text" placeholder="Brukernavn">
-				<input class="w-100" type="text" placeholder="Passord">
+				<input id="username_login" class="w-100" type="text" name="username" placeholder="Brukernavn">
+				<input id="password_login" class="w-100" type="password" name="password" placeholder="Passord">
 			</div>
 			<div class="w-100 df jcsb aic">
 				<a class="secondary-link" href="?page=forgot_password">Glemt passord?</a>
-				<input class="btn success_btn" type="submit" value="Logg inn"/>
+				<input id="login-btn" class="btn success_btn" type="submit" value="Logg inn"/>
 			</div>
 			<div style="margin-top: 20px;" class="w-100 df fg-5 fdc aic">
 				<span>Har du ikke registrert bruker enda?</span>
@@ -55,5 +61,36 @@
 		modal.style.display = 'none';
 		document.getElementById('registerModal').style.display = 'block';
 	};
+
+	$(document).ready(function() {
+		$('#login-btn').click(function() {
+				var username = $("#username_login").val();
+				var password = $("#password_login").val();
+
+				$.ajax({
+						url: 'components/_login.php',
+						method: 'post',
+						data: {
+							username: username,
+							password: password,
+						},
+						success: function(response) {
+								var feedback = response;
+								feedback = feedback.split("<|>");
+
+								var feedbackText = feedback[0];
+								var feedbackType = feedback[1];
+
+								if(feedbackType == 'error'){
+									document.getElementById('success_msg').style.display = 'none';
+									document.getElementById('error_msg').style.display = 'block';
+									$("#errorTxt").text(feedbackText);
+								} else if(feedbackType == 'success') {
+									window.location.href = "../index.php";
+								}
+							}
+					});
+			});
+	});
 
 </script>

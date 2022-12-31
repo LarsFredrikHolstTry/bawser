@@ -2,25 +2,22 @@
 
 ob_start();
 
+if (!session_id()) {
+	session_start();
+}
+
 $lang = json_decode(file_get_contents('languages/en.json'));
 include 'functions/alerts.php';
 require_once 'env.php';
 require_once 'db/GrumpyPDO.php';
 $db = new GrumpyPdo($ENV_host, $ENV_user, $ENV_password, $ENV_db);
 
-$_SESSION['ID'] = 1;
-
-/**
- * Temp data for testing before connecting to database
- */
-$money = 10000000;
-$exp = 250;
+if (!isset($_SESSION['ID'])) {
+	header("Location: homepage");
+	exit();
+}
 
 $account = $db->run("SELECT * FROM account WHERE ACC_id = ".$_SESSION['ID']."")->fetch();
-
-if(!isset($_SESSION['ID'])){
-	header('location: homepage/index.php');
-}
 
 ?>
 
