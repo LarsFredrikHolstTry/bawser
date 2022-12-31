@@ -1,3 +1,9 @@
+<?php
+
+include '_playersOnline.php';
+
+?>
+
 <div class="main_content">
 	<div class="main_content_header">
 		<div class="main_content_header_icon">
@@ -9,25 +15,29 @@
 	</div>
 	<div class="df fdc fg-10 main_content_context">
 		<div class="df fg-5">
-			<input type="submit" class="btn btn_active" value="Aktiv nå" />
-			<input type="submit" class="btn default_btn" value="Sist time" />
-			<input type="submit" class="btn default_btn" value="Siste døgn" />
+			<a class="btn <?= !isset($_GET['active']) || $_GET['active'] == 0 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=0">Aktiv nå</a>
+			<a class="btn <?= isset($_GET['active']) && $_GET['active'] == 1 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=1">Sist time</a>
+			<a class="btn <?= isset($_GET['active']) && $_GET['active'] == 2 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=2">Siste døgn</a>
 		</div>
 		<div class="df fdc aic fg-5">
-			<h2 class="color-white">45 aktive nå</h2>
-			<span>Viser oversikt over hvem som er <b>aktive nå</b></span>
+			<h2 class="color-white"><?= $playersOnlineCount ?> aktiv <?= $playersOnlineCount > 1 ? 'e' : ''; ?> nå</h2>
+			<span>Viser oversikt over hvem som er <b><?= $activeStr ?></b></span>
 		</div>
 		<div class="df fg-20 fww">
 			<?php 
-			for($i = 0; $i <= 45; $i++){
-				?>
-			<div class="df jcc fg-5">
-				<a href="?page=profile&user=username" class="secondary-link mt-1">
-					<i class="fi fi-sr-user"></i>
-					{username}<?= $i ?>
-				</a>
-			</div>
-			<?php } ?>
+
+			foreach($playersOnlineSql as $playersOnline){ 
+
+			?>
+				<div class="df jcc fg-5">
+					<a href="?page=profile&user=<?= $playersOnline['ACC_name'] ?>" class="secondary-link mt-1">
+						<i class="fi fi-sr-user"></i>
+						<?= $playersOnline['ACC_name'] ?>
+					</a>
+				</div>
+			<?php
+			}
+			?>
 		</div>
 	</div>
 </div>
