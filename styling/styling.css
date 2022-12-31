@@ -563,6 +563,7 @@ input[type='password']:focus {
 	border-radius: 3px;
 	transition: 0.2s;
 	font-size: 12px;
+	background-color: #333333;
 }
 
 .success_btn {
