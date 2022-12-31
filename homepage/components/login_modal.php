@@ -13,11 +13,8 @@
 			</span>
 		</div>
 		<div style="padding: 20px 80px;" class="modal-content fdc fg-10 aic">
-		<div id="success_msg" class="w-100">
-				<?php echo alert('success', '<span id="successTxt"></span>') ?>
-			</div>
-			<div id="error_msg" class="w-100">
-				<?php echo alert('error', '<span id="errorTxt"></span>') ?>
+			<div id="error_msg_login" class="w-100">
+				<?php echo alert('error', '<span id="errorTxt_login"></span>') ?>
 			</div>
 			<div>
 				<img class="myFlexedImage" src="../images/small_logo.png">
@@ -82,9 +79,9 @@
 								var feedbackType = feedback[1];
 
 								if(feedbackType == 'error'){
-									document.getElementById('success_msg').style.display = 'none';
-									document.getElementById('error_msg').style.display = 'block';
-									$("#errorTxt").text(feedbackText);
+									document.getElementById('success_msg_login').style.display = 'none';
+									document.getElementById('error_msg_login').style.display = 'block';
+									$("#errorTxt_login").text(feedbackText);
 								} else if(feedbackType == 'success') {
 									window.location.href = "../index.php";
 								}
