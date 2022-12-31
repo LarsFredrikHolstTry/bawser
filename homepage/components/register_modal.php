@@ -44,11 +44,11 @@
 </div>
 <style> 
 
-#success_msg {
+#success_msg, #success_msg_login {
 	display: none;
 }
 
-#error_msg {
+#error_msg, #error_msg_login {
 	display: none;
 }
 
