@@ -18,6 +18,11 @@ if (!isset($_SESSION['ID'])) {
 	exit();
 }
 
+/**
+ * TODO: Find a better way to do this.
+ */
+$db->run("UPDATE account SET ACC_last_active = ".time()." WHERE ACC_id = ".$_SESSION['ID']);
+
 $account = $db->run("SELECT * FROM account WHERE ACC_id = ".$_SESSION['ID']."")->fetch();
 
 ?>
