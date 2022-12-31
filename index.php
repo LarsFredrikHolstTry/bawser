@@ -6,10 +6,11 @@ if (!session_id()) {
 	session_start();
 }
 
-$lang = json_decode(file_get_contents('languages/en.json'));
-include 'functions/alerts.php';
+require_once 'functions/alerts.php';
 require_once 'env.php';
 require_once 'db/GrumpyPDO.php';
+
+$lang = json_decode(file_get_contents('languages/'.$ENV_language.'.json'));
 $db = new GrumpyPdo($ENV_host, $ENV_user, $ENV_password, $ENV_db);
 
 if (!isset($_SESSION['ID'])) {
