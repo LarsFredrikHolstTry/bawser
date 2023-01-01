@@ -7,7 +7,7 @@ $active_time[2] = 86400; // Aktive sist døgn
 $active = $active_time[0];
 
 if(isset($_GET['active'])){
-	$active = $_GET['active'];
+	$active = $active_time[$_GET['active']];
 }
 
 $playersOnlineSql = $db->run("SELECT * FROM account WHERE ACC_last_active >= ".time() - $active)->fetchAll();
