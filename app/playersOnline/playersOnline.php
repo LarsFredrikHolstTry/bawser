@@ -20,7 +20,7 @@ include '_playersOnline.php';
 			<a class="btn <?= isset($_GET['active']) && $_GET['active'] == 2 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=2">Siste døgn</a>
 		</div>
 		<div class="df fdc aic fg-5">
-			<h2 class="color-white"><?= $playersOnlineCount ?> aktiv <?= $playersOnlineCount > 1 ? 'e' : ''; ?> nå</h2>
+			<h2 class="color-white"><?= $playersOnlineCount ?> aktiv<?= $playersOnlineCount > 1 ? 'e' : ''; ?> nå</h2>
 			<span>Viser oversikt over hvem som er <b><?= $activeStr ?></b></span>
 		</div>
 		<div class="df fg-20 fww">
