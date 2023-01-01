@@ -7,14 +7,47 @@
 			Nyheter
 		</div>
 	</div>
+
 	<div class="df fdc fg-10 main_content_context">
-		<div>
-			<div class="content_header df jcsb">
-				<span>WIP</span>
-			</div>
-			<div class="content_context">
-				Nyheter kommer...
-			</div>
-		</div>
+		<?php
+
+			$newsSql = $db->run("SELECT * FROM news ORDER BY NEWS_published ASC")->fetchAll();
+			if(!$newsSql){
+
+			?>
+				<div>
+					<div class="content_header df jcsb">
+						<span>Ingen nyheter</span>
+					</div>
+					<div class="content_context">
+						Det er ingen nyheter å vise.
+					</div>
+				</div>
+			<?php
+
+			} else {
+				foreach($newsSql as $news){
+	
+					$author = $db->run("SELECT ACC_name FROM account WHERE ACC_id = ".$news['NEWS_author'])->fetchColumn();
+
+				?>
+					<div>
+						<div class="content_header df jcsb">
+							<span><?= $news['NEWS_title'] ?></span>
+						</div>
+						<div class="content_context df fdc fg-10">
+							<div>
+								<?= $news['NEWS_text'] ?>
+							</div>
+							<span class="text-secondary">
+								<?= 'av: '. $author. ' - '. $news['NEWS_published'] ?>
+							</span>
+						</div>
+					</div>
+				<?php
+				}
+			}
+
+		?>
 	</div>
 </div>
