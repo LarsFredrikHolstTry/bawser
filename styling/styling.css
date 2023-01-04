@@ -208,6 +208,10 @@ body {
 	justify-content: center;
 }
 
+.jce {
+	justify-content: end;
+}
+
 .mb-1 {
 	margin-bottom: 0.1rem;
 }
@@ -557,7 +561,7 @@ input[type='password']:focus {
 }
 
 .btn {
-	padding: 10px 12px;
+	padding: 10px 17px;
 	border: none;
 	color: #9c9c9c;
 	border-radius: 3px;
@@ -575,7 +579,8 @@ input[type='password']:focus {
 }
 
 .btn_active {
-	background-color: #585858;
+	background-color: #4a601f;
+	color: white;
 }
 
 .error_btn {
