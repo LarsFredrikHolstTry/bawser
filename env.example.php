@@ -10,4 +10,4 @@ $ENV_db = 'bawser';
  * no = Norwegian
  * en = English
  */
-$ENV_language = 'no';
+$ENV_language = 'en';
