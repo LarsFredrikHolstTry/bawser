@@ -14,7 +14,11 @@
   </p>
 </div>
 
-<!-- ABOUT THE PROJECT -->
+## Developing
+
+When we are commiting we are always using gitmoji on commit messages<br>
+Branches should be named with keywords like Bug, Feature or WIP. Ex: bug_fix_login<br>
+Also keep branch names short and precise
 
 ## About The Project
 
