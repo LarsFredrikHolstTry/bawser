@@ -5,7 +5,7 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 ?>
 
 <div class="header shadow">
-	<div class="profile_content no-border df aic fdc fg-5 jcc">
+	<div style="width: 150px;" class="no-border df aic fdc fg-5 jcc">
 		<img src="../images/small_logo.png" />
 		<span>BAWSER</span>
 	</div>
