@@ -79,7 +79,6 @@
 								var feedbackType = feedback[1];
 
 								if(feedbackType == 'error'){
-									document.getElementById('success_msg_login').style.display = 'none';
 									document.getElementById('error_msg_login').style.display = 'block';
 									$("#errorTxt_login").text(feedbackText);
 								} else if(feedbackType == 'success') {
