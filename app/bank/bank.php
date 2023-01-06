@@ -9,7 +9,7 @@
 	</div>
 </div>
 <div class="df fdc fg-10 main_content_context">
-	<div>
+	<div class="innerDiv">
 		<div class="content_header df jcsb">
 			<span><?= str_replace("{interest}", '2.75', $lang->yourBankAcc); ?></span>
 			<a class="primary-link" href="#"><?= $lang->changeBank ?></a>

@@ -3,6 +3,12 @@
 $rightMenuConfig = 
 [
 	[
+		'tabs' => true,
+	],
+	[
+		'divider' => true,
+	],
+	[
 			'label' => $lang->offtopicforum,
 			'amount' => 1,
 			'link' => '?page=forum&cat=0'
@@ -16,12 +22,6 @@ $rightMenuConfig =
 		'label' => $lang->gameforum,
 		'amount' => 5,
 		'link' => '?page=forum&cat=2'
-	],
-	[
-		'divider' => true,
-	],
-	[
-		'tabs' => true,
 	],
 	[
 		'divider' => true,

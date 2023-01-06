@@ -8,7 +8,7 @@
 		</div>
 	</div>
 	<div class="df fdc fg-10 main_content_context">
-		<div>
+		<div class="innerDiv">
 			<?php
 
 			include '_crime.php';

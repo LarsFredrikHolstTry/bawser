@@ -15,7 +15,7 @@
 			if(!$newsSql){
 
 			?>
-				<div>
+				<div class="innerDiv">
 					<div class="content_header df jcsb">
 						<span>Ingen nyheter</span>
 					</div>

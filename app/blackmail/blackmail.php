@@ -8,7 +8,7 @@
 		</div>
 	</div>
 	<div class="df fdc fg-10 main_content_context">
-		<div>
+		<div class="innerDiv">
 			<div class="table-row-clickable content_context df ais fg-20">
 			<div>
 				<iconify-icon class="big_icon" icon="teenyicons:user-circle-solid"></iconify-icon>
@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div class="df fdc fg-10 main_content_context">
-		<div>
+		<div class="innerDiv">
 			<div class="content_context df ais fg-20">
 			<div>
 				<iconify-icon class="big_icon" icon="teenyicons:user-circle-solid"></iconify-icon>

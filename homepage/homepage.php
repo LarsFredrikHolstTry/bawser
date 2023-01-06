@@ -21,7 +21,7 @@ $activeCity = isset($_GET['city']) ? $_GET['city'] : 0;
 		</div>
 	</div>
 	<div class="df fdc fg-10 main_content_context">
-		<div>
+		<div class="innerDiv">
 			<div class="content_header df jcsb">
 				<span>Kartoversikt</span>
 			</div>
