@@ -236,6 +236,14 @@ body {
 	margin-bottom: 0.5rem;
 }
 
+.bb-1 {
+	border-bottom: 1px solid #3f3f3f;
+}
+
+.mt-0 {
+	margin-top: 0 !important;
+}
+
 .mt-1 {
 	margin-top: 0.1rem;
 }
@@ -344,14 +352,22 @@ body {
 	justify-content: center;
 }
 
+.user_info ul {
+	padding-left: 20px;
+}
+
 ul {
 	list-style: none;
-	padding-left: 20px;
+	padding-left: 0px;
 	margin: 0px;
 }
 
+ul .big_padding {
+	padding: 5px 0px;
+}
+
 ul li {
-	padding: 2px;
+	padding: 2px 0px;
 }
 
 .text-secondary {
@@ -437,11 +453,16 @@ ul li {
 	cursor: pointer;
 }
 
+.success-link {
+	color: #a8d900;
+}
+
 .primary-link {
 	color: #f9f9f9;
 }
 
-.primary-link:hover {
+.primary-link:hover,
+.success-link:hover {
 	text-decoration: underline;
 }
 
@@ -477,7 +498,7 @@ a {
 	display: flex;
 	width: 100%;
 	background-color: #2f2f2f;
-	color: #9c9c9c;
+	color: #dadada;
 	align-items: center;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
@@ -495,16 +516,15 @@ a {
 
 .main_content_context {
 	padding: 10px;
-	color: #9c9c9c;
+	color: #dadada;
 }
 
 .content_header {
 	width: 100%;
 	box-sizing: border-box;
 	padding: 10px;
-	color: #9c9c9c;
+	color: #dadada;
 	background-color: #282828;
-	margin-bottom: 2px;
 }
 
 .content_context {
@@ -513,8 +533,22 @@ a {
 	width: 100%;
 	padding: 20px;
 	border-radius: 3px;
-	color: #9c9c9c;
+	color: #dadada;
 	word-wrap: break-word;
+	margin-top: 2px;
+}
+
+.content_context_narrow {
+	padding: 16.6px;
+}
+
+.content_context_link {
+	width: 100%;
+	padding: 20px;
+}
+
+.content_context_ready {
+	background-color: #526715;
 }
 
 input[type='text'],
@@ -535,7 +569,7 @@ select {
 	border: 1px solid #575757;
 	border-radius: 3px;
 	transition: 0.2s;
-	color: #9c9c9c;
+	color: #dadada;
 	font-size: 12px;
 }
 
@@ -566,7 +600,7 @@ input[type='password']:focus {
 .btn {
 	padding: 10px 17px;
 	border: none;
-	color: #9c9c9c;
+	color: #dadada;
 	border-radius: 3px;
 	transition: 0.2s;
 	font-size: 12px;
@@ -629,7 +663,7 @@ h6 {
 	box-sizing: border-box;
 	height: 250px;
 	border-radius: 3px;
-	color: #9c9c9c;
+	color: #dadada;
 }
 
 .tac {
