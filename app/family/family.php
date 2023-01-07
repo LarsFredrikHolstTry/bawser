@@ -113,7 +113,7 @@
 						<td>Lorem</td>
 					</tr>
 				</table> -->
-				<div class="content_context">
+				<div class="content_context content_context_narrow">
 					<?= alert('default', 'Gjengen har ingen firmaer') ?>
 				</div>
 			</div>
