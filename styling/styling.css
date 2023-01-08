@@ -187,6 +187,18 @@ body {
 	max-width: 660px;
 }
 
+.profile_header {
+	width: 100%;
+	height: 150px;
+	background-color: red;
+}
+
+.profile_header_info {
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
 .app {
 	display: flex;
 	gap: 5px;
@@ -238,6 +250,10 @@ body {
 
 .bb-1 {
 	border-bottom: 1px solid #3f3f3f;
+}
+
+.p-0 {
+	padding: 0 !important;
 }
 
 .mt-0 {
@@ -368,6 +384,12 @@ ul .big_padding {
 
 ul li {
 	padding: 2px 0px;
+}
+
+.no-select:hover,
+.no-select {
+	cursor: default;
+	user-select: none;
 }
 
 .text-secondary {

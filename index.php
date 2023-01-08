@@ -7,6 +7,7 @@ if (!session_id()) {
 }
 
 require_once 'functions/alerts.php';
+require_once 'functions/date.php';
 require_once 'env.php';
 require_once 'db/GrumpyPDO.php';
 
