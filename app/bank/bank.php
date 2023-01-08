@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	</div>
-	<div>
+	<div class="innerDiv">
 		<div class="content_header df jcsb">
 			<span><?= $lang->transferMoney ?></span>
 		</div>
