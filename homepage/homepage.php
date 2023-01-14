@@ -42,21 +42,21 @@ $activeCity = isset($_GET['city']) ? $_GET['city'] : 0;
 				<div class="df jcc">
 					<div>
 
-						<!-- sample family start -->
+						<!-- sample gang start -->
 						<div class="tag" style="left: 405px; top: 425px;">
 							<span class="df aic fg-5" style="color: #a65411; font-size: 20px;">&#x2B22; 
 								<span style="margin-top: 2px; color: white; font-size: 11px;">Familie Lorem</span>
 							</span>
 						</div>
-						<!-- sample family end -->
+						<!-- sample gang end -->
 
-						<!-- sample family start -->
+						<!-- sample gang start -->
 						<div class="tag" style="left: 75px; top: 105px;">
 							<span class="df aic fg-5" style="color: #4a601f; font-size: 20px;">&#x2B22; 
 								<span style="margin-top: 2px; color: white; font-size: 11px;">Firma Ipsum</span>
 							</span>
 						</div>
-						<!-- sample family end -->
+						<!-- sample gang end -->
 
 						<img 
 						style="max-width:100%; max-height:100%;" 
@@ -74,7 +74,6 @@ $activeCity = isset($_GET['city']) ? $_GET['city'] : 0;
     float: left;
     position: relative;
 
-    z-index: 1000;
     margin-bottom: -50px;
 		background-color: rgba(0,0,0,.5);
 		border-radius: 5px;

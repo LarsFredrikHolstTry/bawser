@@ -29,7 +29,10 @@ if(isset($_GET['user'])){
 								src="https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png" 
 							/>
 							<div style="margin-left: 160px;">	
-								<span><?= $account['ACC_name'] ?></span> <span class="text-secondary">• Bruker</span>
+								<span><?= $account['ACC_name'] ?></span> 
+								<span class="text-secondary">• Bruker •</span>
+								<span class="vip text-secondary"> VIP Club</span>
+
 							</div>
 						</div>
 						<div>

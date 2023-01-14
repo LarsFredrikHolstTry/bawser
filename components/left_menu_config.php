@@ -63,8 +63,8 @@ $leftMenuConfig =
 		'link' => 'cities'
 	],
 	[
-		'label' => $lang->family,
-		'link' => 'family'
+		'label' => $lang->gang,
+		'link' => 'gang'
 	],
 	[
 		'label' => $lang->achievements,

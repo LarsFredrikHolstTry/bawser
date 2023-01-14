@@ -26,7 +26,7 @@ $sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
 					<li>null</li>
 					<li><?= str_replace("{amount}", '1 000 000', $lang->money_balance); ?></li>
 					<li>null</li>
-					<li><?= $lang->family ?>: <a href="?page=family" class="primary-link">null</a></li>
+					<li><?= $lang->gang ?>: <a href="?page=gang" class="primary-link">null</a></li>
 				</ul>
 			</div>
 		</div>
