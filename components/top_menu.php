@@ -1,6 +1,6 @@
 <?php
 
-$sample_image = "https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png";
+$sample_image = "images/pb/standard.jpg";
 
 ?>
 

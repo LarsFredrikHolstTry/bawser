@@ -26,13 +26,11 @@ if(isset($_GET['user'])){
 						<div style="position: relative;">
 							<img 
 								style="bottom: -5px; position: absolute; max-height: 140px; max-width: 140px;" 
-								src="https://mafioso.no/img/avatar/avatar1663353793-WyjbVa8.png" 
+								src="images/pb/standard.jpg" 
 							/>
 							<div style="margin-left: 160px;">	
 								<span><?= $account['ACC_name'] ?></span> 
-								<span class="text-secondary">• Bruker •</span>
-								<span class="vip text-secondary"> VIP Club</span>
-
+								<span class="text-secondary">• Bruker</span>
 							</div>
 						</div>
 						<div>
@@ -42,36 +40,36 @@ if(isset($_GET['user'])){
 				</div>
 			</div>
 
-	<div class="df fdr">
-		<div style="flex-basis: 25%;"class="df fdc fg-10 main_content_context">
-			<div class="innerDiv">
-				<div class="content_context_narrow">
-					<ul>
-						<li>Rank: <a class="primary-link" href="#">Gudfar</a></li>
-						<li>Familie: <a class="primary-link" href="#">CobrazArme</a></li>
-						<li>Pengerank: <a class="primary-link" href="#">Millionær</a></li>
-						<li>Drap: 0</li>
-						<li>Oppdrag: 0</li>
-						<li class="mt-5">Timesoppdrag vunnet: 123 stk</li>
-						<li>Daglig konkurranse vunnet: 23 stk</li>
-						<li class="mt-5">Forumposter: <a class="primary-link" href="#">44</a></li>
-						<li>Forumrank: <a class="primary-link" href="#">Idemyldrer</a></li>
-						<li class="mt-5">Registrert:<br><a class="primary-link" href="#"><?= date_to_text($account['ACC_register']) ?></a></li>
-					</ul>
+		<div class="df fdr">
+			<div style="flex-basis: 25%;"class="df fdc fg-10 main_content_context">
+				<div class="innerDiv">
+					<div class="content_context_narrow">
+						<ul>
+							<li>Rank: <a class="primary-link" href="#">Gudfar</a></li>
+							<li>Familie: <a class="primary-link" href="#">CobrazArme</a></li>
+							<li>Pengerank: <a class="primary-link" href="#">Millionær</a></li>
+							<li>Drap: 0</li>
+							<li>Oppdrag: 0</li>
+							<li class="mt-5">Timesoppdrag vunnet: 123 stk</li>
+							<li>Daglig konkurranse vunnet: 23 stk</li>
+							<li class="mt-5">Forumposter: <a class="primary-link" href="#">44</a></li>
+							<li>Forumrank: <a class="primary-link" href="#">Idemyldrer</a></li>
+							<li class="mt-5">Registrert:<br><a class="primary-link" href="#"><?= date_to_text($account['ACC_register']) ?></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div style="flex-basis: 75%; padding-left: 0px;" class="df fdc fg-10 main_content_context">
+				<div class="innerDiv">
+					<div class="content_context_narrow tac">
+						<span class="text-secondary no-select">Ingen profiltekst</span>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div style="flex-basis: 75%; padding-left: 0px;" class="df fdc fg-10 main_content_context">
-			<div class="innerDiv">
-				<div class="content_context_narrow tac">
-					<span class="text-secondary no-select">Ingen profiltekst</span>
-				</div>
-			</div>
-		</div>
 	</div>
-
-</div>
 		<?php
 	}
 }
