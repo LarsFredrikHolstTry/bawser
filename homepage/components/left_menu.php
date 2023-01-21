@@ -10,13 +10,14 @@
 	 */
 	$allPlayers = $db->run("SELECT * FROM account")->fetchAll();
 	foreach($allPlayers as $players){
+		$i = 1;
 
 	?>
 		<div class="left_menu_element shadow df aic fg-5">
-			<span class="menu_cooldown">1</span>
+			<span class="menu_cooldown"><?= $i ?></span>
 			<span><?= $players['ACC_name'] ?><span class="text-secondary"> • Null</span></span>
 		</div>
-	<?php } ?>
+	<?php $i++; } ?>
 
 	<div class="aic df jcsb shadow no_link">
 		<span></span>
@@ -32,11 +33,12 @@
 	 */
 	$allPlayers = $db->run("SELECT * FROM account")->fetchAll();
 	foreach($allPlayers as $players){
+		$i = 1;
 
 	?>
 		<div class="left_menu_element shadow df aic fg-5">
-			<span class="menu_cooldown">1</span>
+			<span class="menu_cooldown"><?= $i ?></span>
 			<span><?= $players['ACC_name'] ?><span class="text-secondary"> • Null</span></span>
 		</div>
-	<?php } ?>
+	<?php $i++; } ?>
 </div>
