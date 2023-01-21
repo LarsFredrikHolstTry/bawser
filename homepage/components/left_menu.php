@@ -9,8 +9,8 @@
 	 * COMMENT: Currently no order because there is no table with EXP
 	 */
 	$allPlayers = $db->run("SELECT * FROM account")->fetchAll();
+	$i = 1;
 	foreach($allPlayers as $players){
-		$i = 1;
 
 	?>
 		<div class="left_menu_element shadow df aic fg-5">
@@ -32,8 +32,8 @@
 	 * COMMENT: Currently no order because there is no table with EXP
 	 */
 	$allPlayers = $db->run("SELECT * FROM account")->fetchAll();
+	$i = 1;
 	foreach($allPlayers as $players){
-		$i = 1;
 
 	?>
 		<div class="left_menu_element shadow df aic fg-5">
