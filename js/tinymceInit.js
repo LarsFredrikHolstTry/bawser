@@ -7,8 +7,8 @@ tinymce.init({
 	menubar: false,
 	statusbar: false,
 	toolbar:
-		'formatselect | bold italic underline strikethrough bullist',
+		'bold italic underline strikethrough bullist fontsizeselect alignleft aligncenter alignright forecolor',
 	content_css: 'dark',
-	theme_advanced_default_foreground_color: '#FFFFFF',
-	body_class: 'mceBlackBody',
+	content_style:
+		'body {font-size: 12px; background-color: #363636;}',
 });
