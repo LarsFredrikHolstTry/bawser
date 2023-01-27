@@ -13,10 +13,9 @@ if(isset($_GET['active'])){
 $playersOnlineSql = $db->run("SELECT * FROM account WHERE ACC_last_active >= ".time() - $active)->fetchAll();
 $playersOnlineCount = count($playersOnlineSql);
 
-
 if($active == $active_time[0] || $active == 0){
 	$activeStr = 'aktive nå';
-} elseif($active == 1){
+} elseif($active == $active_time[1]){
 	$activeStr = 'aktive siste timen';
 } else {
 	$activeStr = 'aktive siste døgnet';
