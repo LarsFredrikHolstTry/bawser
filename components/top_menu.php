@@ -6,6 +6,20 @@ $avatar = $avatar ? $avatar : 'images/pb/standard.jpg';
 
 $currentRank = getCurrentRank($user_values['UV_EXP'], $expToArray, $expFromArray, $rankListArray);
 
+/**
+ * Math calculation to get amount of percentage until next rank
+ * TODO: Move this to a function
+ */
+if($currentRank < count($rankListArray)){
+	$exp_from = $expFromArray[$currentRank];
+	$exp_to = $expFromArray[$currentRank + 1];
+	$total_exp_this_rank = $user_values['UV_EXP'] - $exp_from;
+	$total_exp_demand = $exp_to - $exp_from;
+	$exp_demand_this_rank = round($total_exp_this_rank/$total_exp_demand * 100, 0);
+} else {
+	$exp_demand_this_rank = 100;
+}
+
 ?>
 <div class="header shadow">
 	<div class="profile_content">
@@ -40,7 +54,7 @@ $currentRank = getCurrentRank($user_values['UV_EXP'], $expToArray, $expFromArray
 				<div class="df fdc fg-5 aic" style="width: 50%;">
 					<div><b><?= $lang->rank_points ?></b> <span class="text-secondary">• <?= $user_values['UV_EXP'] ?></span></span></div>
 					<div class="progress-bar-rank">
-						<span class="progress-bar-rank-fill" style="width: 70%;"></span>
+						<span class="progress-bar-rank-fill" style="width: <?= $exp_demand_this_rank ?>%;"></span>
 					</div>
 				</div>
 				<div class="df fdc fg-5 aic" style="width: 50%;">
