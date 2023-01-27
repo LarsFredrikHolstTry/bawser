@@ -44,6 +44,11 @@ if($password != $repeatPassword){
 	];
 	$db->insert('verification', $values);
 
+	$values = [
+		'UV_acc_id' => $ACC_id,
+	];
+	$db->insert('user_values', $values);
+
 	$_SESSION['ID'] = $ACC_id;
 
 	echo 'Du er registrert! ' . '<|>' . 'success';

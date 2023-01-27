@@ -2,10 +2,13 @@
 
 if(isset($_GET['user'])){
 	$account = $db->run("SELECT * FROM account WHERE ACC_name = ?", [$_GET['user']])->fetch();
-
+	
 	if(!$account){
 		include 'no_user.php';
 	} else {
+		$profile = $db->run("SELECT PRO_text FROM profiles WHERE PRO_acc_id = ?", [$account['ACC_id']])->fetchColumn();
+		$avatar = $db->run("SELECT PROPIC_src FROM profile_picture WHERE PROPIC_acc_id = ?", [$account['ACC_id']])->fetchColumn();
+
 		?>
 		<div class="main_content">
 			<div class="main_content_header">
@@ -24,9 +27,9 @@ if(isset($_GET['user'])){
 					></div>
 					<div class="df jcsb profile_header_info">
 						<div style="position: relative;">
-							<img 
+							<img
 								style="bottom: -5px; position: absolute; max-height: 140px; max-width: 140px;" 
-								src="images/pb/standard.jpg" 
+								src="<?= $avatar ? $avatar : 'images/pb/standard.jpg' ?>" 
 							/>
 							<div style="margin-left: 160px;">	
 								<span><?= $account['ACC_name'] ?></span> 
@@ -62,8 +65,12 @@ if(isset($_GET['user'])){
 
 			<div style="flex-basis: 75%; padding-left: 0px;" class="df fdc fg-10 main_content_context">
 				<div class="innerDiv">
-					<div class="content_context_narrow tac">
-						<span class="text-secondary no-select">Ingen profiltekst</span>
+					<div class="content_context_narrow">
+						<?php if(!$profile){ ?>
+						<span class="text-secondary no-select tac">Ingen profiltekst</span>
+						<?php } else { 
+							echo $profile;
+						 } ?>
 					</div>
 				</div>
 			</div>

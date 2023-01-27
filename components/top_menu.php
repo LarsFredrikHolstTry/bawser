@@ -1,14 +1,17 @@
 <?php
 
-$sample_image = "images/pb/standard.jpg";
+$avatar = $db->run("SELECT PROPIC_src FROM profile_picture WHERE PROPIC_acc_id = ? AND PROPIC_active = 1", [$account['ACC_id']])->fetchColumn();
+
+$avatar = $avatar ? $avatar : 'images/pb/standard.jpg';
+
+$currentRank = getCurrentRank($user_values['UV_EXP'], $expToArray, $expFromArray, $rankListArray);
 
 ?>
-
 <div class="header shadow">
 	<div class="profile_content">
 		<div class="df aic">
 			<div class="profile_picture">
-				<img class="shadow" style="max-height: 110px;" src=<?= $sample_image ?> />
+				<img class="shadow" style="max-width: 110px; max-height: 110px;" src=<?= $avatar ?> />
 			</div>
 			<div class="user_info">
 				<ul>
@@ -23,9 +26,9 @@ $sample_image = "images/pb/standard.jpg";
 							</a>
 						</div>
 					</li>
-					<li>null</li>
-					<li><?= str_replace("{amount}", '1 000 000', $lang->money_balance); ?></li>
-					<li>null</li>
+					<li><? $rankListArray[$currentRank] ?></li>
+					<li><?= str_replace("{amount}", number($user_values['UV_money']), $lang->money_balance); ?></li>
+					<li><?= $city[$user_values['UV_city']] ?></li>
 					<li><?= $lang->gang ?>: <a href="?page=gang" class="primary-link">null</a></li>
 				</ul>
 			</div>
@@ -35,15 +38,15 @@ $sample_image = "images/pb/standard.jpg";
 		<div class="df fdc jcc">
 			<div class="df fg-20" style="height: 50px;">
 				<div class="df fdc fg-5 aic" style="width: 50%;">
-					<div><b><?= $lang->rank_points ?></b> <span class="text-secondary">• 145 678</span></span></div>
+					<div><b><?= $lang->rank_points ?></b> <span class="text-secondary">• <?= $user_values['UV_EXP'] ?></span></span></div>
 					<div class="progress-bar-rank">
 						<span class="progress-bar-rank-fill" style="width: 70%;"></span>
 					</div>
 				</div>
 				<div class="df fdc fg-5 aic" style="width: 50%;">
-					<div><b><?= $lang->health ?></b><span class="text-secondary"> • 100%</span></span></div>
+					<div><b><?= $lang->health ?></b><span class="text-secondary"> • <?= $user_values['UV_health'] ?>%</span></span></div>
 					<div class="progress-bar-health">
-						<span class="progress-bar-health-fill" style="width: 100%;"></span>
+						<span class="progress-bar-health-fill" style="width: <?= $user_values['UV_health'] ?>%;"></span>
 					</div>
 				</div>
 			</div>

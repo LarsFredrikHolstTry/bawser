@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Display alert on the front end
+ * 
+ * Allowed types:
+ * success, error, default, warning
+ */
 function alert(string $type, string $text){
 
 	switch ($type) {

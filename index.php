@@ -8,6 +8,9 @@ if (!session_id()) {
 
 require_once 'functions/alerts.php';
 require_once 'functions/date.php';
+require_once 'functions/cities.php';
+require_once 'functions/number.php';
+require_once 'functions/ranks.php';
 require_once 'env.php';
 require_once 'db/GrumpyPDO.php';
 
@@ -24,7 +27,8 @@ if (!isset($_SESSION['ID'])) {
  */
 $db->run("UPDATE account SET ACC_last_active = ".time()." WHERE ACC_id = ".$_SESSION['ID']);
 
-$account = $db->run("SELECT * FROM account WHERE ACC_id = ".$_SESSION['ID']."")->fetch();
+$account = $db->run("SELECT * FROM account WHERE ACC_id = ".$_SESSION['ID'])->fetch();
+$user_values = $db->run("SELECT * FROM user_values WHERE UV_acc_id = ".$_SESSION['ID'])->fetch();
 
 ?>
 
@@ -41,6 +45,8 @@ $account = $db->run("SELECT * FROM account WHERE ACC_id = ".$_SESSION['ID']."")-
 		<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 		<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdn.tiny.cloud/1/4vo9pq3l206pg9640lozx073tggj0afph407ddaitgm169ok/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+	  <script src="js/tinymceInit.js"></script>
 	</head>
 	<body>
 		<div class="container">

@@ -261,6 +261,10 @@ body {
 	margin-bottom: 0.5rem;
 }
 
+.pl-5 {
+	padding-left: 0.5rem;
+}
+
 .bb-1 {
 	border-bottom: 1px solid #3f3f3f;
 }
@@ -577,6 +581,14 @@ a {
 	padding: 16.6px;
 }
 
+.content_context_narrow-1 {
+	padding: 13.6px;
+}
+
+.content_context_narrow-2 {
+	padding: 10.6px;
+}
+
 .content_context_link {
 	width: 100%;
 	padding: 20px;
@@ -640,6 +652,10 @@ input[type='password']:focus {
 	transition: 0.2s;
 	font-size: 12px;
 	background-color: #333333;
+}
+
+.btn-small {
+	padding: 6.5px 3.5px;
 }
 
 .success_btn {
@@ -903,4 +919,19 @@ tr:nth-child(odd) {
 	color: white;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.bsbb {
+	box-sizing: border-box;
+}
+
+.tox-tinymce {
+	border-radius: 3px !important;
+	border: none !important;
+}
+
+.tox-editor-header,
+.tox-toolbar__primary,
+.mceBlackBody {
+	background-color: #1b1b1b !important;
 }
