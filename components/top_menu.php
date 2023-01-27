@@ -100,10 +100,10 @@ if($currentRank < count($rankListArray)){
 			</a>
 		</div>
 		<div class="df jcc aic fg-5">
-			<i class="big_icon mt-1 fi fi-rr-clock-five"></i>
-			<div class="df fdc">
-				<span class="clock_text">21:08</span>
-				<span>02.01.02020</span>
+			<!-- <i class="big_icon mt-1 fi fi-rr-clock-five"></i> -->
+			<div class="df fdc tac">
+				<span class="clock_text" id="clock"><?= date('H:i:s', time()) ?></span>
+				<span id="date"><?= date_to_text_long(time()) ?></span>
 			</div>
 		</div>
 	</div>

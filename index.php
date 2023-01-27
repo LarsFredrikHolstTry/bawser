@@ -47,8 +47,9 @@ $user_values = $db->run("SELECT * FROM user_values WHERE UV_acc_id = ".$_SESSION
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdn.tiny.cloud/1/4vo9pq3l206pg9640lozx073tggj0afph407ddaitgm169ok/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 	  <script src="js/tinymceInit.js"></script>
+	  <script src="js/time.js"></script>
 	</head>
-	<body>
+	<body onload="startTime(); startDate();">
 		<div class="container">
 			<div class="content">
 				<?php include 'components/mobile/mobile_header.php'; ?>

@@ -33,3 +33,11 @@ function date_to_text($date)
 
     }
 }
+
+function date_to_text_long($date)
+{
+    $month_short = [" ", "Januar", "Februar", "Mars", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Desember"];
+    $day_short = ["Søndag", "Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag"];
+
+    return $day_short[date('w', $date)] . " " . date('d', $date) . ". " . $month_short[date('n', $date)];
+}
