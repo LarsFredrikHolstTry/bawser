@@ -89,5 +89,5 @@ if(isset($_POST['uploadAvatar'])){
 }
 
 if(isset($_GET['updateprofile'])){
-	echo alert('success', 'Profilen ble oppdatet');
+	echo alert('success', 'Profilen ble oppdatert');
 }
