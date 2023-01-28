@@ -26,5 +26,16 @@
 	"notifications": "Varslinger",
 	"map": "Kart",
 	"yourBankAcc": "Din bankkonto (Eff. rente {interest}%)",
-	"accountBalance": "Din konto balanse"
+	"accountBalance": "Din konto balanse",
+	"changeBank": "Endre bank",
+	"withdraw": "Ta ut",
+	"deposit": "Sett inn",
+	"withdrawAmount": "Ta ut penger",
+	"depositAmount": "Sett inn penger",
+	"transferMoney": "Send penger",
+	"transfer": "Send penger",
+	"username": "Brukernavn",
+	"amount": "Antall",
+	"money": "Penger",
+	"points": "Poeng"
 }
