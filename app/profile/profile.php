@@ -2,12 +2,14 @@
 
 if(isset($_GET['user'])){
 	$account = $db->run("SELECT * FROM account WHERE ACC_name = ?", [$_GET['user']])->fetch();
+	$user_values_visit = $db->run("SELECT * FROM user_values WHERE UV_acc_id = ?", [$account['ACC_id']])->fetch();
 	
 	if(!$account){
 		include 'no_user.php';
 	} else {
 		$profile = $db->run("SELECT PRO_text FROM profiles WHERE PRO_acc_id = ?", [$account['ACC_id']])->fetchColumn();
 		$avatar = $db->run("SELECT PROPIC_src FROM profile_picture WHERE PROPIC_acc_id = ?", [$account['ACC_id']])->fetchColumn();
+		$currentRankUser = getCurrentRank($user_values_visit['UV_EXP'], $expToArray, $expFromArray, $rankListArray);
 
 		?>
 		<div class="main_content">
@@ -33,7 +35,7 @@ if(isset($_GET['user'])){
 							/>
 							<div style="margin-left: 160px;">	
 								<span><?= $account['ACC_name'] ?></span> 
-								<span class="text-secondary">• Bruker</span>
+								<span class="text-secondary">• <span style="color: #<?= $user_rank_colors[$account['ACC_status']] ?>"><?= $user_rank[$account['ACC_status']] ?></span></span>
 							</div>
 						</div>
 						<div>
@@ -48,16 +50,16 @@ if(isset($_GET['user'])){
 				<div class="innerDiv">
 					<div class="content_context_narrow">
 						<ul>
-							<li>Rank: <a class="primary-link" href="#">Gudfar</a></li>
-							<li>Familie: <a class="primary-link" href="#">CobrazArme</a></li>
-							<li>Pengerank: <a class="primary-link" href="#">Millionær</a></li>
-							<li>Drap: 0</li>
-							<li>Oppdrag: 0</li>
-							<li class="mt-5">Timesoppdrag vunnet: 123 stk</li>
-							<li>Daglig konkurranse vunnet: 23 stk</li>
-							<li class="mt-5">Forumposter: <a class="primary-link" href="#">44</a></li>
-							<li>Forumrank: <a class="primary-link" href="#">Idemyldrer</a></li>
-							<li class="mt-5">Registrert:<br><a class="primary-link" href="#"><?= date_to_text($account['ACC_register']) ?></a></li>
+							<li>Rank: <a class="primary-link" href="#"><?= $rankListArray[$currentRankUser] ?></a></li>
+							<li>Familie: <a class="primary-link" href="#">null</a></li>
+							<li>Pengerank: null</li>
+							<li>Drap: null</li>
+							<li>Oppdrag: null</li>
+							<li class="mt-5">Timesoppdrag vunnet: null stk</li>
+							<li>Daglig konkurranse vunnet: null stk</li>
+							<li class="mt-5">Forumposter: <a class="primary-link" href="#">null</a></li>
+							<li>Forumrank: <a class="primary-link" href="#">null</a></li>
+							<li class="mt-5">Registrert:<br><?= date_to_text($account['ACC_register']) ?></li>
 						</ul>
 					</div>
 				</div>

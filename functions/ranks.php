@@ -1,5 +1,23 @@
 <?php
 
+$user_rank = [
+	"Bruker",
+	"Support",
+	"Forum moderator",
+	"Moderator",
+	"Administrator",
+	"Utvikler"
+];
+
+$user_rank_colors = [
+	"Bruker",
+	"Support",
+	"Forum moderator",
+	"Moderator",
+	"Administrator",
+	"bbf706"
+];
+
 $rankListArray = [
 	"Nybegynner", 
 	"Løpegutt", 
