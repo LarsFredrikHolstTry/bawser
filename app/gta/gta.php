@@ -19,13 +19,13 @@ include '_gta.php';
 			Her kan du stjele biler av ulike typer. Du velger selv hvilken lokasjon du ønsker å stjele fra.<br>
 			Noen lokasjoner gir deg mer penger, andre gir deg mer trening i enkle biltyveri og rankpoeng.
 		</div>
-		<div class="df fdc fg-5">
+		<div id="next-cards" class="df fdc fg-5">
 			<?php for($i = 0; $i < count($gta); $i++){ 
 				$percentage_fail_success = $gta_success[$i] / $gta_fails[$i] * 100;
 				$percentage_fail_success_str = $percentage_fail_success > 100 ? 100 : $percentage_fail_success;
 				?>
-			<div class="action_btn">
-				<div class="df fdr jcsb aic">
+			<div class="next-card action_btn">
+				<div class="next-card-content df fdr jcsb aic">
 					<div class="df fdc fg-5">
 						<h3><?= $gta[$i] ?></h3>
 						<span><?= $gta_chance[$i] ?>% sannsynelighet</span>
@@ -76,3 +76,5 @@ include '_gta.php';
 		</div>
 	</div>
 </div>
+
+<script src="js/next-js-hover.js"></script>
