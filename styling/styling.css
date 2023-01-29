@@ -369,6 +369,7 @@ b {
 
 .iconify-for-header {
 	font-size: 14px;
+	margin-bottom: -4px;
 }
 
 .semi_medium_icon {
