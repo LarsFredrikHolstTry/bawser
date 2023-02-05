@@ -13,7 +13,7 @@
 				<span>Unknown user</span>
 			</div>
 			<div class="content_context">
-				<?= alert('error', "No user with name ".$_GET['user']." found in the database."); ?>
+				<?= alert('error', "Fant ingen bruker med brukernavn '".$_GET['user']."'"); ?>
 			</div>
 		</div>
 	</div>
