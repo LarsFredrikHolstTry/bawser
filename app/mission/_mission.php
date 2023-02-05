@@ -61,6 +61,11 @@ $missionConfig =
 				'type' => 'bullet',
 				'amount' => '10'
 			],
+			[
+				'type' => 'lorem',
+				'amount' => '1',
+				'secret' => true,
+			],
 		]
 	],
 	[

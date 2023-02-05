@@ -141,6 +141,11 @@ $active_mission_data = $missionConfig[$active_mission];
 							$payout_str = number($payout['amount']) .' kuler';
 						}
 
+						if(isset($payout['secret']) && $payout['secret'] == true){
+							$icon = '<iconify-icon class="mission_icon" icon="mdi:gift"></iconify-icon>';
+							$payout_str = 'Tilfeldig gave';
+						}
+
 						?>
 					<div class="fg-1 mission_payout fg-5 df jcc fdc aic">
 						<?= $icon ?>
