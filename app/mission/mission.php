@@ -17,6 +17,38 @@ $active_mission_data = $missionConfig[$active_mission];
 		</div>
 	</div>
 
+		<!-- TODO: Create a component for this!!! -->
+		<div class="stepper-wrapper">
+      <div class="stepper-item stepper-active">
+        <div class="step-counter"></div>
+        <div class="step-name-active">Freddy</div>
+      </div>
+      <div class="stepper-item ">
+        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-name">Låst</div>
+      </div>
+      <div class="stepper-item">
+        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-name">Låst</div>
+      </div>
+      <div class="stepper-item">
+        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-name">Låst</div>
+      </div>
+			<div class="stepper-item">
+        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-name">Låst</div>
+      </div>
+			<div class="stepper-item">
+        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-name">Låst</div>
+      </div>
+			<div class="stepper-item">
+        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-name">Låst</div>
+      </div>
+    </div>
+
 	<div class="df fdr">
 		<div class="w-45 df fdc fg-10 main_content_context">
 			<div class="innerDiv" >
@@ -120,3 +152,92 @@ $active_mission_data = $missionConfig[$active_mission];
 		</div>
 	</div>
 </div>
+
+<!-- TODO: Move this to styling.css, clean up first!!! -->
+<style>
+.stepper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0px 10px 0px;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #333333;
+  width: 100%;
+  top: 25px;
+  left: -50%;
+  z-index: 2;
+}
+
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #333333;
+  width: 100%;
+  top: 25px;
+  left: 50%;
+  z-index: 2;
+}
+
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #333333;
+	margin-bottom: 6px;
+}
+
+.step-name, .step-counter {
+	color: grey;
+}
+
+.stepper-active .step-counter {
+	border: 2px solid #bbf706;
+	width: 46px;
+  height: 46px;
+	background: url('https://images.unsplash.com/photo-1633220744880-cdf6c2b39f57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+	background-size: 50px;
+	background-position: center;
+}
+
+.step-name-active {
+	color: #bbf706;
+}
+
+.stepper-item.completed .step-counter {
+  background-color: #4bb543;
+}
+
+.stepper-item.completed::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #4bb543;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 3;
+}
+
+.stepper-item:first-child::before {
+  content: none;
+}
+.stepper-item:last-child::after {
+  content: none;
+}
+
+
+</style>
