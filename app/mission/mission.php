@@ -24,27 +24,27 @@ $active_mission_data = $missionConfig[$active_mission];
         <div class="step-name-active">Freddy</div>
       </div>
       <div class="stepper-item ">
-        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-counter"><iconify-icon class="big_icon" icon="material-symbols:lock"></iconify-icon></div>
         <div class="step-name">Låst</div>
       </div>
       <div class="stepper-item">
-        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-counter"><iconify-icon class="big_icon" icon="material-symbols:lock"></iconify-icon></div>
         <div class="step-name">Låst</div>
       </div>
       <div class="stepper-item">
-        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-counter"><iconify-icon class="big_icon" icon="material-symbols:lock"></iconify-icon></div>
         <div class="step-name">Låst</div>
       </div>
 			<div class="stepper-item">
-        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-counter"><iconify-icon class="big_icon" icon="material-symbols:lock"></iconify-icon></div>
         <div class="step-name">Låst</div>
       </div>
 			<div class="stepper-item">
-        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-counter"><iconify-icon class="big_icon" icon="material-symbols:lock"></iconify-icon></div>
         <div class="step-name">Låst</div>
       </div>
 			<div class="stepper-item">
-        <div class="step-counter"><iconify-icon icon="material-symbols:lock"></iconify-icon></div>
+        <div class="step-counter"><iconify-icon class="big_icon" icon="material-symbols:lock"></iconify-icon></div>
         <div class="step-name">Låst</div>
       </div>
     </div>
