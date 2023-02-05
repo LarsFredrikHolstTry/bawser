@@ -35,7 +35,7 @@ if(isset($_GET['user'])){
 							/>
 							<div style="margin-left: 160px;">	
 								<span><?= $account['ACC_name'] ?></span> 
-								<span class="text-secondary">• <span style="color: #<?= $user_rank_colors[$account['ACC_status']] ?>"><?= $user_rank[$account['ACC_status']] ?></span></span>
+								<span class="text-secondary">• <span style="color: <?= $user_rank_colors[$account['ACC_status']] ?>"><?= $user_rank[$account['ACC_status']] ?></span></span>
 							</div>
 						</div>
 						<div>

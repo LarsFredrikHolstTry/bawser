@@ -10,12 +10,12 @@ $user_rank = [
 ];
 
 $user_rank_colors = [
-	"Bruker",
-	"Support",
-	"Forum moderator",
-	"Moderator",
-	"Administrator",
-	"bbf706"
+	"#75cff5",
+	"green",
+	"pink",
+	"orange",
+	"red",
+	"#bbf706"
 ];
 
 $rankListArray = [

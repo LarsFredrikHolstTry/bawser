@@ -35,7 +35,7 @@ if($currentRank < count($rankListArray)){
 						</div>
 						<div>
 							<a href="?page=profile&user=<?= $account['ACC_name'] ?? 'null' ?>" class="primary-link mt-1">
-								<i style="color: #FF7902" class="fi fi-sr-user"></i> 
+								<i style="color: <?= $user_rank_colors[$account['ACC_status']] ?>" class="fi fi-sr-user"></i> 
 								<?= $account['ACC_name'] ?? 'null' ?>
 							</a>
 						</div>
