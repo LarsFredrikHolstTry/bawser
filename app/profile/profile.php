@@ -7,7 +7,7 @@ if(isset($_GET['user'])){
 	} else {
 		$user_values_visit = 		$db->run("SELECT * FROM user_values WHERE UV_acc_id = ?", [$account['ACC_id']])->fetch();
 		$profile = 							$db->run("SELECT PRO_text FROM profiles WHERE PRO_acc_id = ?", [$account['ACC_id']])->fetchColumn();
-		$avatar = 							$db->run("SELECT PROPIC_src FROM profile_picture WHERE PROPIC_acc_id = ?", [$account['ACC_id']])->fetchColumn();
+		$avatar = 							$db->run("SELECT PROPIC_src FROM profile_picture WHERE PROPIC_acc_id = ? AND PROPIC_active = 1", [$account['ACC_id']])->fetchColumn();
 		$userGangMembership = 	$db->run("SELECT * FROM gang_members WHERE GAME_acc_id = ".$account['ACC_id'])->fetch() ?? null;
 		$currentRankUser = 			getCurrentRank($user_values_visit['UV_EXP'], $expToArray, $expFromArray, $rankListArray);
 
