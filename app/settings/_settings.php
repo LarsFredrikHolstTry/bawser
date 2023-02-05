@@ -64,6 +64,8 @@ if(isset($_POST['uploadAvatar'])){
 				// $sql = "INSERT INTO uploaded_avatar (UOA_acc_id, UOA_avatar) VALUES (?,?)";
 				// $pdo -> prepare($sql)->execute([$_SESSION['ID'], $target_file]);
 
+				$db->run("UPDATE profile_picture SET PROPIC_active = 0 WHERE PROPIC_active = 1 AND PROPIC_acc_id = ?", [$_SESSION['ID']]);
+
 				$values = [
 					[
 						'PROPIC_acc_id' => $_SESSION['ID'],
