@@ -2,14 +2,18 @@
 
 if(isset($_GET['user'])){
 	$account = $db->run("SELECT * FROM account WHERE ACC_name = ?", [$_GET['user']])->fetch();
-	$user_values_visit = $db->run("SELECT * FROM user_values WHERE UV_acc_id = ?", [$account['ACC_id']])->fetch();
-	
 	if(!$account){
 		include 'no_user.php';
 	} else {
-		$profile = $db->run("SELECT PRO_text FROM profiles WHERE PRO_acc_id = ?", [$account['ACC_id']])->fetchColumn();
-		$avatar = $db->run("SELECT PROPIC_src FROM profile_picture WHERE PROPIC_acc_id = ?", [$account['ACC_id']])->fetchColumn();
-		$currentRankUser = getCurrentRank($user_values_visit['UV_EXP'], $expToArray, $expFromArray, $rankListArray);
+		$user_values_visit = 		$db->run("SELECT * FROM user_values WHERE UV_acc_id = ?", [$account['ACC_id']])->fetch();
+		$profile = 							$db->run("SELECT PRO_text FROM profiles WHERE PRO_acc_id = ?", [$account['ACC_id']])->fetchColumn();
+		$avatar = 							$db->run("SELECT PROPIC_src FROM profile_picture WHERE PROPIC_acc_id = ?", [$account['ACC_id']])->fetchColumn();
+		$userGangMembership = 	$db->run("SELECT * FROM gang_members WHERE GAME_acc_id = ".$account['ACC_id'])->fetch() ?? null;
+		$currentRankUser = 			getCurrentRank($user_values_visit['UV_EXP'], $expToArray, $expFromArray, $rankListArray);
+
+		if($userGangMembership != null){
+			$userGang = $db->run("SELECT * FROM gang WHERE GANG_id = ".$userGangMembership['GAME_gang'])->fetch();
+		}
 
 		?>
 		<div class="main_content">
@@ -51,7 +55,7 @@ if(isset($_GET['user'])){
 					<div class="content_context_narrow">
 						<ul>
 							<li>Rank: <a class="primary-link" href="#"><?= $rankListArray[$currentRankUser] ?></a></li>
-							<li>Familie: <a class="primary-link" href="#">null</a></li>
+							<li>Familie: <a class="primary-link" href="#"><?= $userGang['GANG_name'] ?? 'Ingen' ?></a></li>
 							<li>Pengerank: null</li>
 							<li>Drap: null</li>
 							<li>Oppdrag: null</li>
