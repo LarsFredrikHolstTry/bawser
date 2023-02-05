@@ -34,7 +34,7 @@ include '_playersOnline.php';
 			?>
 				<div class="df jcc fg-5">
 					<a href="?page=profile&user=<?= $playersOnline['ACC_name'] ?>" class="secondary-link mt-1">
-						<i class="fi fi-sr-user"></i>
+						<i style="color: <?= $user_rank_colors[$playersOnline['ACC_status']] ?>" class="fi fi-sr-user"></i>
 						<?= $playersOnline['ACC_name'] ?>
 					</a>
 				</div>
