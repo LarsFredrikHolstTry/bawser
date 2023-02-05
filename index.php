@@ -29,8 +29,10 @@ $db->run("UPDATE account SET ACC_last_active = ".time()." WHERE ACC_id = ".$_SES
 
 $account 						= $db->run("SELECT * FROM account WHERE ACC_id = ".$_SESSION['ID'])->fetch();
 $user_values 				= $db->run("SELECT * FROM user_values WHERE UV_acc_id = ".$_SESSION['ID'])->fetch();
-$myGangMembership 	= $db->run("SELECT * FROM gang_members WHERE GAME_acc_id = ".$_SESSION['ID'])->fetch();
-$myGang 						= $db->run("SELECT * FROM gang WHERE GANG_id = ".$myGangMembership['GAME_gang'])->fetch();
+$myGangMembership 	= $db->run("SELECT * FROM gang_members WHERE GAME_acc_id = ".$_SESSION['ID'])->fetch() ?? null;
+if($myGangMembership != null){
+	$myGang 						= $db->run("SELECT * FROM gang WHERE GANG_id = ".$myGangMembership['GAME_gang'])->fetch();
+}
 
 ?>
 
