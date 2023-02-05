@@ -11,17 +11,17 @@ $rightMenuConfig =
 	[
 			'label' => $lang->offtopicforum,
 			'amount' => 1,
-			'link' => '?page=forum&cat=0'
+			'link' => 'forum&cat=0'
 	],
 	[
 		'label' => $lang->salesforum,
 		'amount' => 5,
-		'link' => '?page=forum&cat=1'
+		'link' => 'forum&cat=1'
 	],
 	[
 		'label' => $lang->gameforum,
 		'amount' => 5,
-		'link' => '?page=forum&cat=2'
+		'link' => 'forum&cat=2'
 	],
 	[
 		'divider' => true,
@@ -29,23 +29,23 @@ $rightMenuConfig =
 	[
 		'label' => 'Hjelp / Support',
 		'amount' => 0,
-		'link' => '?page=support'
+		'link' => 'support'
 	],
 	[
 		'label' => 'Søknader',
 		'amount' => 0,
-		'link' => '?page=applications'
+		'link' => 'applications'
 	],
 	[
 		'label' => 'Rankliste',
-		'link' => '?page=ranks'
+		'link' => 'ranks'
 	],
 	[
 		'label' => 'Statistikk',
-		'link' => '?page=statistic'
+		'link' => 'statistic'
 	],
 	[
 		'label' => 'Poeng',
-		'link' => '?page=points'
+		'link' => 'points'
 	],
 ];
