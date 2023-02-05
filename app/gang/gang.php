@@ -114,11 +114,13 @@ if($gang_member){
 							$gang_member = [
 								'GAME_acc_id' => $_SESSION['ID'],
 								'GAME_gang' => $gang_id,
-								'GAME_status' => 1,
+								'GAME_status' => 0,
 								'GAME_joined' => time()
 							];
 							$db->insert('gang_members', $gang_member);
-							
+
+							$db->run("UPDATE user_values SET UV_money = UV_money - ? WHERE UV_acc_id = ?", [$price, $_SESSION['ID']]);
+
 							header("Location: ?page=gang");
 						}
 					}

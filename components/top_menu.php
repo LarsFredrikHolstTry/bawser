@@ -43,7 +43,7 @@ if($currentRank < count($rankListArray)){
 					<li><? $rankListArray[$currentRank] ?></li>
 					<li><?= str_replace("{amount}", number($user_values['UV_money']), $lang->money_balance); ?></li>
 					<li><?= $city[$user_values['UV_city']] ?></li>
-					<li><?= $lang->gang ?>: <a href="?page=gang" class="primary-link">null</a></li>
+					<li><?= $lang->gang ?>: <a href="?page=gang" class="primary-link"><?= $myGang['GANG_name'] ?></a></li>
 				</ul>
 			</div>
 		</div>

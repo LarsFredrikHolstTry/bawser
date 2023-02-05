@@ -1,3 +1,19 @@
+<?php
+
+$myGangMembership 	= $db->run("SELECT * FROM gang_members WHERE GAME_acc_id = ".$_SESSION['ID'])->fetch();
+$myGang 						= $db->run("SELECT * FROM gang WHERE GANG_id = ".$myGangMembership['GAME_gang'])->fetch();
+$total_members    	= $db->run("SELECT COUNT(*) FROM gang WHERE GANG_id = ".$myGangMembership['GAME_gang'])->fetchColumn();
+$getLeader 					= $db->run("SELECT GAME_acc_id FROM gang_members WHERE GAME_status = 4 AND GAME_gang = ".$myGang['GANG_id'])->fetchColumn();
+$getLeaderUsername 	= $db->run("SELECT ACC_name FROM account WHERE ACC_id = ".$getLeader)->fetchColumn();
+
+$gang_rank[0] = 'Associates';
+$gang_rank[1] = 'Soldiers';
+$gang_rank[2] = 'Caporegime';
+$gang_rank[3] = 'Underboss';
+$gang_rank[4] = 'Boss';
+
+?>
+
 <div class="main_content">
 	<div class="main_content_header">
 		<div class="main_content_header_icon">
@@ -11,10 +27,10 @@
 		<div class="innerDiv">
 			<div class="content_context_narrow-2 df jcsb">
 				<span>
-					Din gjeng: <a class="primary-link" href="#">The Skitzos</a> • 
-					Status: <a class="primary-link" href="#">Leder</a> • 
-					Medlemmer: <a class="primary-link" href="#">8 stk</a> • 
-					Gjengranking: <a class="primary-link" href="#">#2</a></span>
+					Din gjeng: <?= $myGang['GANG_name'] ?> • 
+					Status: <?= $gang_rank[$myGangMembership['GAME_status']] ?> • 
+					Medlemmer: <?= $total_members ?> stk • 
+					Gjengranking: <a class="primary-link" href="#">#null</a></span>
 			</div>
 		</div>
 	</div>
@@ -67,20 +83,20 @@
 		<div style="flex-basis: 50%;" class="df fdc fg-10 main_content_context">
 			<div class="innerDiv">
 			<div class="content_header">
-					CobrazArne • Oversikt
+				<?= $myGang['GANG_name'] ?> • Oversikt
 				</div>
 				<div class="content_context">
 					<ul>
-						<li class="big_padding">Leder: <a class="primary-link" href="#">Cobraz</a></li>
-						<li class="big_padding">Medlemmer: <a class="primary-link" href="#">2 stk</a></li>
-						<li class="big_padding">Gjengranking: <a class="primary-link" href="#">#2</a></li>
-						<li class="big_padding">Penger tjent idag: 10 000 000 kr</li>
-						<li class="big_padding">Penger tjent siste uken: 120 000 000 kr</li>
-						<li class="big_padding">EXP ranket idag: 297</li>
-						<li class="big_padding">EXP ranket denne uken: 2567</li>
-						<li class="big_padding">Familiebank: 100 000 000 kr • <a class="success-link" href="#">Donasjon</a></li>
-						<li class="big_padding">Firmaer: 3 stk</li>
-						<li class="big_padding">Gjeng opprettet: 01.01.2023</li>
+						<li class="big_padding">Leder: <a class="primary-link" href="?page=profile&user=<?= $getLeaderUsername ?>"><?= $getLeaderUsername ?></a></li>
+						<li class="big_padding">Medlemmer: <a class="primary-link" href="#"><?= $total_members ?> stk</a></li>
+						<li class="big_padding">Gjengranking: <a class="primary-link" href="#">#null</a></li>
+						<li class="big_padding">Penger tjent idag: null kr</li>
+						<li class="big_padding">Penger tjent siste uken: null kr</li>
+						<li class="big_padding">EXP ranket idag: null</li>
+						<li class="big_padding">EXP ranket denne uken: null</li>
+						<li class="big_padding">Familiebank: null kr • <a class="success-link" href="#">Donasjon</a></li>
+						<li class="big_padding">Firmaer: null stk</li>
+						<li class="big_padding">Gjeng opprettet: <?= date_to_text($myGang['GANG_created']) ?></li>
 					</ul>
 					<div class="mt-10 df fg-10">
 						<a class="primary-link" href="#">Innstillinger</a> • <a class="primary-link" href="#">Søknader</a> • <a class="primary-link" href="#">Gjengforum</a>
@@ -133,22 +149,23 @@
 						<th>Bidrag til familien</th>
 						<th>Medlem siden</th>
 					</tr>
+					<?php
+
+$allMembers = $db->run("SELECT * FROM gang_members WHERE GAME_gang = ".$myGang['GANG_id'])->fetchAll();
+$i = 1;
+foreach($allMembers as $member){
+	$getUsername 	= $db->run("SELECT ACC_name FROM account WHERE ACC_id = ".$member['GAME_acc_id'])->fetchColumn();
+
+?>
 					<tr>
-						<td>Cobraz</td>
-						<td>Leder</td>
-						<td>23</td>
-						<td>23 034</td>
-						<td>1 002 333 222 kr</td>
-						<td>01.01.2023</td>
+						<td><a class="primary-link" href="?page=profile&user=<?= $getUsername ?>"><?= $getUsername ?></a></td>
+						<td><?= $gang_rank[$member['GAME_status']] ?></td>
+						<td>null</td>
+						<td>null</td>
+						<td>null</td>
+						<td><?= date_to_text($member['GAME_joined']) ?></td>
 					</tr>
-					<tr>
-						<td>Skitzo</td>
-						<td>Medlem</td>
-						<td>13</td>
-						<td>53 034</td>
-						<td>302 333 222 kr</td>
-						<td>23.02.2023</td>
-					</tr>
+<?php } ?>
 				</table>
 			</div>
 		</div>
