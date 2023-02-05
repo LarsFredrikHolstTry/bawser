@@ -281,6 +281,10 @@ b {
 	padding: 0 !important;
 }
 
+.pl-0 {
+	padding-left: 0 !important;
+}
+
 .mt-0 {
 	margin-top: 0 !important;
 }
@@ -417,8 +421,16 @@ b {
 	width: 50%;
 }
 
+.w-55 {
+	width: 55%;
+}
+
 .w-40 {
 	width: 40%;
+}
+
+.w-45 {
+	width: 45%;
 }
 
 .w-30 {
@@ -1057,4 +1069,54 @@ tr:nth-child(odd) {
 	padding: 1rem;
 	position: absolute;
 	z-index: 2;
+}
+
+.mission_list_object {
+	padding: 10px;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.mission_list_object:nth-child(odd) {
+	background-color: #292929;
+}
+
+.mission_list_object:nth-child(even) {
+	background-color: #272727;
+}
+
+.done_mission,
+.in_progress_mission {
+	color: #bbf706;
+}
+
+.locked_mission {
+	color: grey;
+}
+
+.mission_icon {
+	font-size: 30px;
+}
+
+.mission_payout {
+	border: 1px solid #3f3f3f;
+	padding: 10px;
+}
+
+.mission_payout_money {
+	color: #bbf706;
+}
+
+.mission_payout_xp {
+	color: #ff7902;
+}
+
+.mission_payout_bullet {
+	color: #ffba00;
+}
+
+.fg-1 {
+	flex-grow: 1;
 }
