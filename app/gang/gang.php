@@ -2,8 +2,8 @@
 
 $price = 10000000;
 
-$gang_member = $db->run("SELECT * FROM gang_members WHERE GAME_acc_id = ?", [$_SESSION['ID']])->fetch();
-$gangs = $db->run("SELECT * FROM gang")->fetchAll();
+$gang_member = 	$db->run("SELECT * FROM gang_members WHERE GAME_acc_id = ?", [$_SESSION['ID']])->fetch();
+$gangs = 				$db->run("SELECT * FROM gang")->fetchAll();
 
 if($gang_member){
 	include 'gang_dashboard.php';
@@ -114,7 +114,7 @@ if($gang_member){
 							$gang_member = [
 								'GAME_acc_id' => $_SESSION['ID'],
 								'GAME_gang' => $gang_id,
-								'GAME_status' => 0,
+								'GAME_status' => 4,
 								'GAME_joined' => time()
 							];
 							$db->insert('gang_members', $gang_member);
