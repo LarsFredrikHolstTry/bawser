@@ -18,6 +18,9 @@ include '_playersOnline.php';
 			<a class="btn <?= !isset($_GET['active']) || $_GET['active'] == 0 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=0">Aktiv nå</a>
 			<a class="btn <?= isset($_GET['active']) && $_GET['active'] == 1 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=1">Sist time</a>
 			<a class="btn <?= isset($_GET['active']) && $_GET['active'] == 2 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=2">Siste døgn</a>
+			<a class="btn <?= isset($_GET['active']) && $_GET['active'] == 3 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=3">Siste uken</a>
+			<a class="btn <?= isset($_GET['active']) && $_GET['active'] == 4 ? 'btn_active' : '' ?>" href="?page=playersOnline&active=4">Siste måneden</a>
+
 		</div>
 		<div class="df fdc aic fg-5">
 			<h2 class="color-white"><?= $playersOnlineCount ?> aktiv<?= $playersOnlineCount > 1 ? 'e' : ''; ?> nå</h2>
