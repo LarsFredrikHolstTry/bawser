@@ -1,7 +1,7 @@
 <div class="main_content">
 	<div class="main_content_header">
 		<div class="main_content_header_icon">
-			<i class="fi fi-rr-exclamation"></i>
+			<iconify-icon class="iconify-for-header" icon="bi:exclamation-octagon-fill"></iconify-icon>
 		</div>
 		<div class="main_content_header_text">
 			404

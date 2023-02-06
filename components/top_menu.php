@@ -35,7 +35,7 @@ if($currentRank < count($rankListArray)){
 						</div>
 						<div>
 							<a href="?page=profile&user=<?= $account['ACC_name'] ?? 'null' ?>" class="primary-link mt-1">
-								<i style="color: <?= $user_rank_colors[$account['ACC_status']] ?>" class="fi fi-sr-user"></i> 
+								<iconify-icon class="user-icon iconify-for-header" style="color: <?= $user_rank_colors[$account['ACC_status']] ?>" icon="mdi:user"></iconify-icon>
 								<?= $account['ACC_name'] ?? 'null' ?>
 							</a>
 						</div>
@@ -66,19 +66,19 @@ if($currentRank < count($rankListArray)){
 			</div>
 			<div style="height: 50px;" class="df fg-50">
 				<a href="?page=home" class="secondary-link df fdc aic fg-5">
-					<i class="big_icon fi fi-sr-home"></i>
+					<iconify-icon class="big_icon" icon="mdi:house"></iconify-icon>
 					<span><?= $lang->home ?></span>
 				</a>
 				<a href="?page=messages" class="secondary-link df fdc aic fg-5">
-					<i class="big_icon fi fi-sr-envelope"></i>
+					<iconify-icon class="big_icon" icon="vaadin:envelope"></iconify-icon>
 					<span><?= $lang->messages ?></span>
 				</a>
 				<a href="?page=notifications" class="secondary-link df fdc aic fg-5">
-					<i class="big_icon fi fi-sr-bell"></i>
+					<iconify-icon class="big_icon" icon="mdi:bell"></iconify-icon>
 					<span><?= $lang->notifications ?></span>
 				</a>
 				<a href="?page=map" class="secondary-link df fdc aic fg-5">
-					<i class="big_icon fi fi-sr-map"></i>
+					<iconify-icon class="big_icon" icon="material-symbols:map-sharp"></iconify-icon>
 					<span><?= $lang->map ?></span>
 				</a>
 			</div>
@@ -90,13 +90,13 @@ if($currentRank < count($rankListArray)){
 	<div class="right_content">
 		<div style="height: 50px; padding: 0px 40px;" class="df jcsb">
 			<a href="?page=playersOnline" class="mt-5 medium_icon secondary-link df fdc aic fg-5">
-				<i class="fi fi-sr-users"></i>
+				<iconify-icon icon="mdi:user-multiple"></iconify-icon>
 			</a>
 			<a href="?page=settings" class="mt-5 medium_icon secondary-link df fdc aic fg-5">
-				<i class="fi fi-sr-settings"></i>
+				<iconify-icon icon="material-symbols:settings"></iconify-icon>
 			</a>
 			<a href="?page=logout" class="logout mt-5 medium_icon secondary-link df fdc aic fg-5">
-				<i class="fi fi-sr-exit"></i>
+				<iconify-icon icon="material-symbols:logout"></iconify-icon>
 			</a>
 		</div>
 		<div class="df jcc aic fg-5">

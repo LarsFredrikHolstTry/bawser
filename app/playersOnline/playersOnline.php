@@ -7,7 +7,7 @@ include '_playersOnline.php';
 <div class="main_content">
 	<div class="main_content_header">
 		<div class="main_content_header_icon">
-			<i class="fi fi-sr-bank"></i>
+			<iconify-icon class="iconify-for-header" icon="mdi:user-multiple"></iconify-icon>
 		</div>
 		<div class="main_content_header_text">
 			Players online
@@ -34,7 +34,8 @@ include '_playersOnline.php';
 			?>
 				<div class="df jcc fg-5">
 					<a href="?page=profile&user=<?= $playersOnline['ACC_name'] ?>" class="secondary-link mt-1">
-						<i style="color: <?= $user_rank_colors[$playersOnline['ACC_status']] ?>" class="fi fi-sr-user"></i>
+						<iconify-icon class="user-icon iconify-for-header" style="color: <?= $user_rank_colors[$playersOnline['ACC_status']] ?>" icon="mdi:user"></iconify-icon>
+
 						<?= $playersOnline['ACC_name'] ?>
 					</a>
 				</div>

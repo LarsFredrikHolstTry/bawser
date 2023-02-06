@@ -377,12 +377,13 @@ b {
 
 .main_content_header
 	.main_content_header_icon
-	.iconify-for-header {
+	.iconify-for-header,
+.user-icon {
 	margin-bottom: -4px;
 }
 
 .semi_medium_icon {
-	font-size: 12px;
+	font-size: 15px;
 }
 
 .jcsb {

@@ -19,7 +19,7 @@ if(isset($_GET['user'])){
 		<div class="main_content">
 			<div class="main_content_header">
 				<div class="main_content_header_icon">
-					<i class="fi fi-sr-bank"></i>
+					<iconify-icon class="iconify-for-header" icon="mdi:user"></iconify-icon>
 				</div>
 				<div class="main_content_header_text">
 					Profil
