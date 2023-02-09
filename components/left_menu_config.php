@@ -4,26 +4,24 @@ $leftMenuConfig =
 [
 	[
 		'label' => $lang->crime,
-		'ready' => true,
-		'cooldown' => 0,
+		'ready' => isReady($db, $_SESSION['ID'], 'crime'),
+		'cooldown' => getCooldown($db, $_SESSION['ID'], 'crime'),
 		'link' => 'crime'
 	],
 	[
 		'label' => $lang->blackmail,
-		'ready' => true,
-		'cooldown' => 0,
+		'ready' => isReady($db, $_SESSION['ID'], 'blackmail'),
+		'cooldown' => getCooldown($db, $_SESSION['ID'], 'blackmail'),
 		'link' => 'blackmail'
 	],
 	[
 		'label' => $lang->gta,
-		'ready' => false,
-		'cooldown' => 25,
+		'ready' => isReady($db, $_SESSION['ID'], 'gta'),
+		'cooldown' => getCooldown($db, $_SESSION['ID'], 'gta'),
 		'link' => 'gta'
 	],
 	[
 		'label' => $lang->mission,
-		'ready' => false,
-		'cooldown' => 2,
 		'link' => 'mission'
 	],
 	[
