@@ -44,8 +44,8 @@ $leftMenuConfig =
 		'link' => 'bank'
 	],
 	[
-		'label' => $lang->homepage,
-		'link' => 'homepage'
+		'label' => $lang->horseRace,
+		'link' => 'horseRace'
 	],
 	[
 		'label' => $lang->poker,
