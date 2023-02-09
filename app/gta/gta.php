@@ -1,5 +1,6 @@
 <?php
 
+require_once 'functions/outcome.php';
 include '_gta.php';
 
 ?>
@@ -21,8 +22,14 @@ include '_gta.php';
 		</div>
 		<div id="next-cards" class="df fdc fg-5">
 			<?php for($i = 0; $i < count($gta); $i++){ 
-				$percentage_fail_success = $gta_success[$i] / $gta_fails[$i] * 100;
-				$percentage_fail_success_str = $percentage_fail_success > 100 ? 100 : $percentage_fail_success;
+
+				if($gta_success[$i] == 0 && $gta_fails[$i] == 0){
+					$percentage_fail_success_str = 100;
+				} else {
+					$percentage_fail_success = $gta_success[$i] / $gta_fails[$i] * 100;
+					$percentage_fail_success_str = $percentage_fail_success > 100 ? 100 : $percentage_fail_success;
+				}
+
 				?>
 			<div class="next-card action_btn">
 				<div class="next-card-content df fdr jcsb aic">
@@ -40,40 +47,7 @@ include '_gta.php';
 			</div>
 			<?php } ?>
 		</div>
-		<div class="innerDiv">
-			<div class="content_header df jcsb">
-				<span class="df aic fg-5">
-					<iconify-icon class="iconify-for-header" icon="mdi:clock-time-five-outline"></iconify-icon> 
-					Aktive konkurranser
-				</span>
-				<a href="#" class="secondary-link df aic">
-					<iconify-icon class="iconify-for-header" icon="material-symbols:double-arrow"></iconify-icon>
-					Gå til konkurranse senter
-				</a>
-			</div>
-			<div class="content_context_narrow-2 df fdr jcsb">
-				<div class="innerDiv w-100 mr-5">
-					<div class="tac content_context df fdc fg-10">
-						<h3>Timeskonkurranse</h3>
-						<h2 class="text-green">00:23:52</h2>
-						<div class="df fdc">
-							<span>Din plassering denne timen er <span class="text-green">#3</span></span>
-							<span>med 23 kriminaliteter og 12 biltyveri</span>
-						</div>
-					</div>
-				</div>
-				<div class="innerDiv w-100 ml-5">
-					<div class="tac content_context df fdc fg-10">
-						<h3>Daglig konkurranse</h3>
-						<h2 class="text-green">08:02:56</h2>
-						<div class="df fdc">
-							<span>Din plassering i dag er <span class="text-green">#4</span></span>
-							<span>med 78 kriminaliteter og 34 biltyveri</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<?php include 'components/activeCompetition.php'; ?>
 	</div>
 </div>
 

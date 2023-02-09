@@ -21,7 +21,7 @@ $avatar_exist = $avatar['PROPIC_src'] ?? null;
 		<div style="flex-basis: 55%;" class="df fdc fg-10 main_content_context">
 			<div class="innerDiv">
 				<div class="content_header df jcsb">
-					<span>Change profilepicture</span>
+					<span>Endre profilbilde</span>
 				</div>
 				<div class="content_context_narrow df fdr">
 					<div style="flex-basis: 45%;">
@@ -44,14 +44,14 @@ $avatar_exist = $avatar['PROPIC_src'] ?? null;
 		<div style="flex-basis: 45%; padding-left: 0px;" class="df fdc fg-10 main_content_context">
 			<div class="innerDiv">
 				<div class="content_header df jcsb">
-					<span>Change password</span>
+					<span>Endre passord</span>
 				</div>
 				<div class="content_context_narrow-1">
 					<form class="df fdc fg-5" method="post">
-						<input class="w-100 bsbb" type="password" name="oldPassword" placeholder="Old password">
-						<input class="mt-5 w-100 bsbb" type="password" name="newPassword" placeholder="New password">
-						<input class="mt-5 w-100 bsbb" type="password" name="repeatNewPassword" placeholder="New password again">
-						<input class="mt-5 btn success_btn btn-small" name="changePassword" value="Change password" type="submit">
+						<input class="w-100 bsbb" type="password" name="oldPassword" placeholder="Gammelt passord">
+						<input class="mt-5 w-100 bsbb" type="password" name="newPassword" placeholder="Nytt passord">
+						<input class="mt-5 w-100 bsbb" type="password" name="repeatNewPassword" placeholder="Nytt passord igjen">
+						<input class="mt-5 btn success_btn btn-small" name="changePassword" value="Endre passord" type="submit">
 					</form>
 				</div>
 			</div>
@@ -60,14 +60,14 @@ $avatar_exist = $avatar['PROPIC_src'] ?? null;
 	<div class="df fdc fg-10 main_content_context">
 		<div class="innerDiv">
 			<div class="content_header df jcsb">
-				<span>Edit profile</span>
+				<span>Endre profiltekst</span>
 			</div>
 			<div class="content_context">
 			<form class="df fdc fg-5" method="post">
 				<textarea name="profileText" id="tinyMCEEditor">
 					<?= $profile ?>
 				</textarea>
-				<input class="btn success_btn btn-small" name="saveProfile" value="Save profile" type="submit">
+				<input class="btn success_btn btn-small" name="saveProfile" value="Lagre profilen" type="submit">
 			</form>
 			</div>
 		</div>

@@ -1,5 +1,6 @@
 <?php
 
+require_once 'functions/outcome.php';
 include '_crime.php';
 
 ?>
@@ -59,8 +60,10 @@ include '_crime.php';
 							];
 						$db->run("UPDATE user_values SET UV_EXP = UV_EXP + :exp, UV_money = UV_money + :money WHERE UV_acc_id = :id", $updates);
 
+						setOutcome($db, $_SESSION['ID'], 'crime', true);
 						header("Location: ?page=crime&outcome=success&money=$money_payout&exp=$exp_payout");
 					} else {
+						setOutcome($db, $_SESSION['ID'], 'crime', false);
 						header("Location: ?page=crime&outcome=failed");
 						
 					}
@@ -71,13 +74,8 @@ include '_crime.php';
 
 		?>
 		<div class="tac py-1 text-dark">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim, 
-			eros at suscipit bibendum, elit lacus venenatis magna, quis molestie 
-			lectus eros sit amet orci. Nam aliquet nibh quis ligula suscipit, ac 
-			viverra tortor gravida. Nam ac sollicitudin augue. Suspendisse tempor 
-			velit sit amet nulla placerat, nec congue tortor aliquam. Nulla a accumsan 
-			velit. In sapien tellus, volutpat et neque ac, viverra congue orci. 
-			Cras neque lacus, maximus nec gravida sed, faucibus sed ante.
+			Her kan du utføre forskjellige kriminelle handlinger. De forskjellige handlingene vil gi deg<br>
+			en variasjon i penger utbetalt og rankpoeng som gjør deg til en mer mektig mafia!
 		</div>
 		<?php if(!$crimeIsReady){ 
 			echo alert('cooldown', 'Du har ventetid i <span id="cooldown">'.getCooldown($db, $_SESSION['ID'], 'crime').'</span>s!');
@@ -90,6 +88,7 @@ include '_crime.php';
 		<form method="post">
 			<div id="next-cards" class="df fdc fg-5">
 				<?php for($i = 0; $i < count($crime); $i++){ 
+
 					if($crime_success[$i] == 0 && $crime_fails[$i] == 0){
 						$percentage_fail_success_str = 100;
 					} else {
@@ -116,40 +115,7 @@ include '_crime.php';
 			</div>
 		</form>
 		<?php } ?>
-		<div class="innerDiv">
-			<div class="content_header df jcsb">
-				<span class="df aic fg-5">
-					<iconify-icon class="iconify-for-header" icon="mdi:clock-time-five-outline"></iconify-icon> 
-					Aktive konkurranser
-				</span>
-				<a href="#" class="secondary-link df aic">
-					<iconify-icon class="iconify-for-header" icon="material-symbols:double-arrow"></iconify-icon>
-					Gå til konkurranse senter
-				</a>
-			</div>
-			<div class="content_context_narrow-2 df fdr jcsb">
-				<div class="innerDiv w-100 mr-5">
-					<div class="tac content_context df fdc fg-10">
-						<h3>Timeskonkurranse</h3>
-						<h2 class="text-green">00:23:52</h2>
-						<div class="df fdc">
-							<span>Din plassering denne timen er <span class="text-green">#3</span></span>
-							<span>med 23 kriminaliteter og 12 biltyveri</span>
-						</div>
-					</div>
-				</div>
-				<div class="innerDiv w-100 ml-5">
-					<div class="tac content_context df fdc fg-10">
-						<h3>Daglig konkurranse</h3>
-						<h2 class="text-green">08:02:56</h2>
-						<div class="df fdc">
-							<span>Din plassering i dag er <span class="text-green">#4</span></span>
-							<span>med 78 kriminaliteter og 34 biltyveri</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<?php include 'components/activeCompetition.php'; ?>
 	</div>
 </div>
 
@@ -160,5 +126,12 @@ include '_crime.php';
     document.getElementById('selected_crime').value = id;
     document.forms[0].submit();
   }
+
+	var d = new Date();
+var h = d.getHours();
+var m = d.getMinutes();
+var s = d.getSeconds();
+var secondsUntilEndOfDate = (24*60*60) - (h*60*60) - (m*60) - s;
+	console.log('secondsUntilEndOfDate:',secondsUntilEndOfDate)
 
 </script>
