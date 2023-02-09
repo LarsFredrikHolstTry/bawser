@@ -21,6 +21,9 @@ function alert(string $type, string $text){
 		case 'warning':
 			$icon = 'material-symbols:warning-outline-rounded';
 			break;
+		case 'cooldown':
+			$icon = 'mdi:alarm-clock';
+			break;
 	}
 
 	$alert = '

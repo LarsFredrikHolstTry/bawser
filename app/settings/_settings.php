@@ -56,14 +56,6 @@ if(isset($_POST['uploadAvatar'])){
 			$extensions_arr = array("jpg","jpeg","png","gif");
 
 			if(in_array($imageFileType, $extensions_arr)){
-				// $stmt = $pdo->prepare("UPDATE accounts_stat SET AS_avatar = :as_avatar WHERE AS_id = :as_id");
-				// $stmt->bindParam(":as_avatar", $target_file);
-				// $stmt->bindParam(":as_id", $_SESSION['ID']);
-				// $stmt->execute();
-				
-				// $sql = "INSERT INTO uploaded_avatar (UOA_acc_id, UOA_avatar) VALUES (?,?)";
-				// $pdo -> prepare($sql)->execute([$_SESSION['ID'], $target_file]);
-
 				$db->run("UPDATE profile_picture SET PROPIC_active = 0 WHERE PROPIC_active = 1 AND PROPIC_acc_id = ?", [$_SESSION['ID']]);
 
 				$values = [

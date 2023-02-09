@@ -866,12 +866,14 @@ h6 {
 	color: #c4372c;
 }
 
-.feedback-default {
+.feedback-default,
+.feedback-cooldown {
 	color: #afdcef;
 	background-color: #071318;
 }
 
-.feedback-default-icon {
+.feedback-default-icon,
+.feedback-cooldown-icon {
 	color: #2293c6;
 }
 

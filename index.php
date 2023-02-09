@@ -11,6 +11,7 @@ require_once 'functions/date.php';
 require_once 'functions/cities.php';
 require_once 'functions/number.php';
 require_once 'functions/ranks.php';
+require_once 'functions/cooldown.php';
 require_once 'env.php';
 require_once 'db/GrumpyPDO.php';
 
@@ -49,6 +50,7 @@ if($myGangMembership != null){
 		<script src="https://cdn.tiny.cloud/1/4vo9pq3l206pg9640lozx073tggj0afph407ddaitgm169ok/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 	  <script src="js/tinymceInit.js"></script>
 	  <script src="js/time.js"></script>
+		<script src="js/cooldown.js"></script>
 	</head>
 	<body onload="startTime(); startDate();">
 		<div class="container">
