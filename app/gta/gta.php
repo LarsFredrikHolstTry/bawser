@@ -23,12 +23,14 @@ include '_gta.php';
 		<div id="next-cards" class="df fdc fg-5">
 			<?php for($i = 0; $i < count($gta); $i++){ 
 
-				if($gta_success[$i] == 0 && $gta_fails[$i] == 0){
-					$percentage_fail_success_str = 100;
-				} else {
-					$percentage_fail_success = $gta_success[$i] / $gta_fails[$i] * 100;
-					$percentage_fail_success_str = $percentage_fail_success > 100 ? 100 : $percentage_fail_success;
-				}
+			$gta_total = $gta_success[$i] + $gta_fails[$i];
+
+			if($gta_success[$i] == 0){
+				$percentage_fail_success_str = 0;
+			} else {
+				$percentage_fail_success = $gta_success[$i] / $gta_total * 100;
+				$percentage_fail_success_str = $percentage_fail_success > 100 ? 100 : $percentage_fail_success;
+			}
 
 				?>
 			<div class="next-card action_btn">
@@ -36,7 +38,7 @@ include '_gta.php';
 					<div class="df fdc fg-5">
 						<h3><?= $gta[$i] ?></h3>
 						<span><?= $gta_chance[$i] ?>% sannsynelighet</span>
-						<span><?= $gta_success[$i] ?> av <?= $gta_fails[$i] ?> vellykkede forsøk (<?= round($percentage_fail_success_str, 0) ?>%)</span>
+						<span><?= $gta_success[$i] ?> av <?= $gta_total ?> vellykkede forsøk (<?= round($percentage_fail_success_str, 0) ?>%)</span>
 					</div>
 					<div class="df fdc fg-5">
 						<span>Bilverdi <?= $gta_money_from[$i] ?> til <?= number($gta_money_to[$i]) ?> kr</span>

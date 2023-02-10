@@ -89,19 +89,22 @@ include '_crime.php';
 			<div id="next-cards" class="df fdc fg-5">
 				<?php for($i = 0; $i < count($crime); $i++){ 
 
-					if($crime_success[$i] == 0 && $crime_fails[$i] == 0){
-						$percentage_fail_success_str = 100;
+					$crime_total = $crime_success[$i] + $crime_fails[$i];
+
+					if($crime_success[$i] == 0){
+						$percentage_fail_success_str = 0;
 					} else {
-						$percentage_fail_success = $crime_success[$i] / $crime_fails[$i] * 100;
+						$percentage_fail_success = $crime_success[$i] / $crime_total * 100;
 						$percentage_fail_success_str = $percentage_fail_success > 100 ? 100 : $percentage_fail_success;
 					}
+
 					?>
 				<div class="next-card action_btn" onclick="submitForm(<?= $i ?>)">
 					<div class="next-card-content df fdr jcsb aic">
 						<div class="df fdc fg-5">
 							<h3><?= $crime[$i] ?></h3>
 							<span><?= $crime_chance[$i] ?>% sannsynelighet</span>
-							<span><?= $crime_success[$i] ?> av <?= $crime_fails[$i] ?> vellykkede forsøk (<?= round($percentage_fail_success_str, 0) ?>%)</span>
+							<span><?= $crime_success[$i] ?> av <?= $crime_total ?> vellykkede forsøk (<?= round($percentage_fail_success_str, 0) ?>%)</span>
 						</div>
 						<div class="df fdc fg-5">
 							<span>Pengeverdi <?= $crime_money_from[$i] ?> til <?= number($crime_money_to[$i]) ?> kr</span>
