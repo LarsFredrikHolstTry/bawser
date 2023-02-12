@@ -1,5 +1,5 @@
 <div class="fg-5 df fdc aic">
-	<iconify-icon class="medium_icon" icon="zondicons:information-solid"></iconify-icon>
+	<iconify-icon class="medium_icon" icon="material-symbols:forum"></iconify-icon>
 	<span>Siste fra forum</span>
 </div>
 <div class="tac mt-10 df fdc aic">
