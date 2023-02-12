@@ -8,3 +8,8 @@ function number($amount)
         return number_format($amount, 0, '.', ' ');
     }
 }
+
+function remove_space($value)
+{
+    return str_replace(' ', '', $value);
+}
