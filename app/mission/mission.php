@@ -2,8 +2,9 @@
 
 include '_mission.php';
 
-$active_mission = 2;
-$active_mission_data = $missionConfig[$active_mission];
+$active_mission_data = $missionConfig[$active_story];
+
+$amount_of_tasks = count($missionConfig[$active_story]['missions']);
 
 ?>
 
@@ -92,9 +93,14 @@ $active_mission_data = $missionConfig[$active_mission];
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum, sapien ut dictum ornare, lorem felis commodo enim, at gravida risus augue sit amet massa. 
 				
 				<div class="df fdc fg-5 mt-10">
-				<?php foreach($missionConfig[$active_mission]['missions'] as $mission){ ?>
+				<?php 
+				$done_tasks = 0;
+
+				foreach($missionConfig[$active_story]['missions'] as $mission){ ?>
 					<div class="<?= !$mission['in_progress'] && !$mission['done'] ? 'locked_mission' : '' ?> mission_list_object">
 							<?php
+							
+							$done_tasks = $mission['done'] ? $done_tasks + 1 : $done_tasks;
 							
 							echo $mission['label'];
 
@@ -111,7 +117,7 @@ $active_mission_data = $missionConfig[$active_mission];
 				<?php } ?>
 				</div>
 				<div class="content_context content_context_narrow-2 tac">
-					Du har fullført <span class="text-green">60%</span> av oppdraget <?= $active_mission_data['label'] ?>.<br>
+					Du har fullført <span class="text-green"><?php echo $done_tasks / $amount_of_tasks * 100?>%</span> av oppdraget <?= $active_mission_data['label'] ?>.<br>
 					Utfør resten av underoppdragene før du kan fortsette, lykke til!
 				</div>
 			</div>
@@ -125,7 +131,9 @@ $active_mission_data = $missionConfig[$active_mission];
 			</div>
 			<div class="content_context content_context_narrow-2">
 				<div class="df fdr fg-10">
-					<?php foreach($missionConfig[$active_mission]['payout'] as $payout){ 
+					<?php 
+				
+					foreach($missionConfig[$active_story]['payout'] as $payout){ 
 						
 						$icon = null;
 						$payout_str = null;
