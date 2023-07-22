@@ -44,6 +44,14 @@ $leftMenuConfig =
 		'link' => 'bank'
 	],
 	[
+		'label' => $lang->garage,
+		'link' => 'garage'
+	],
+	[
+		'label' => $lang->storage,
+		'link' => 'storage'
+	],
+	[
 		'label' => $lang->horseRace,
 		'link' => 'horseRace'
 	],
